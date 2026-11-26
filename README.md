@@ -1,3 +1,3 @@
-# PLACED Outdoor — V2 Static Storefront
+# PLACED Outdoor — V5 Static Storefront + Master Guide
 
-Includes Porch Editions, End/Side Gable selector, PT Floor upgrade, NB permit & pad prep guidance, JSON-LD schema, and Web3Forms lead capture.
+Includes interactive shed estimator, 10-sheet permit & homeowner booklet (`booklet.html`), Buyer's Guides (`guides.html`), and Master Buyer, Builder & Compliance Guide (`master-guide.html`).

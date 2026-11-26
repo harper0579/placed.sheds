@@ -111,3 +111,23 @@ if (modelSelect && modelParam) {
 if (detailsBox && detailsParam) {
   detailsBox.value = detailsParam + "\n\n";
 }
+
+// Architectural Plate Lightbox
+const lightbox = document.getElementById('plateLightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+const lightboxCap = document.getElementById('lightboxCap');
+const lightboxClose = document.getElementById('lightboxClose');
+
+if (lightbox && lightboxImg) {
+  document.querySelectorAll('[data-full]').forEach(el => {
+    el.addEventListener('click', () => {
+      lightboxImg.src = el.dataset.full;
+      lightboxCap.textContent = el.dataset.caption || '';
+      lightbox.classList.add('open');
+    });
+  });
+  const closeBox = () => lightbox.classList.remove('open');
+  if (lightboxClose) lightboxClose.addEventListener('click', closeBox);
+  lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeBox(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeBox(); });
+}

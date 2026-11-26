@@ -306,3 +306,160 @@ details p { margin-top: 12px; margin-bottom: 0; }
   section, .pageHero { padding: 56px 20px; }
   .top { padding: 0 20px; }
 }
+
+/* Buyer's Guides / Blog Hub */
+.articleCard {
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.025));
+  border-radius: 26px;
+  padding: 36px;
+  margin-bottom: 32px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+}
+.articleMeta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--cedar);
+}
+.articleMeta span.pillTag {
+  background: rgba(212, 165, 116, 0.16);
+  border: 1px solid rgba(212, 165, 116, 0.4);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+.articleCard h2 { font-size: clamp(26px, 3.4vw, 38px); margin: 8px 0 14px; }
+.articleCard h3 { font-size: 20px; color: var(--cream); margin: 22px 0 8px; }
+.tocBar {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.tocBar a {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid var(--border);
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--cream);
+}
+.tocBar a:hover { border-color: var(--cedar); color: var(--cedar); }
+
+/* Mini Permit & Homeowner Booklet Showcase */
+.plateGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 28px;
+}
+.plateCard {
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+  border-radius: 22px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.32);
+}
+.plateThumb {
+  position: relative;
+  background: #0b1424;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  cursor: zoom-in;
+  border-bottom: 1px solid var(--border);
+}
+.plateThumb.tall { aspect-ratio: 4 / 3; }
+.plateThumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.25s ease;
+}
+.plateThumb:hover img { transform: scale(1.02); }
+.plateSheetTag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(14, 19, 17, 0.88);
+  border: 1px solid var(--cedar);
+  color: var(--cedar);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 5px 11px;
+  border-radius: 999px;
+}
+.plateZoomHint {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: rgba(14, 19, 17, 0.85);
+  color: var(--cream);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+.plateBody { padding: 22px 24px; }
+.plateBody h3 { margin: 0 0 6px; font-size: 20px; }
+.plateBody p { margin: 0; font-size: 14px; }
+
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: rgba(5, 8, 7, 0.94);
+  backdrop-filter: blur(10px);
+  padding: 24px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 14px;
+}
+.lightbox.open { display: flex; }
+.lightbox img {
+  max-width: 95vw;
+  max-height: 82vh;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  box-shadow: 0 24px 90px rgba(0,0,0,0.75);
+}
+.lightboxCaption { color: var(--cream); font-weight: 700; font-size: 15px; text-align: center; }
+.lightboxClose {
+  position: absolute;
+  top: 18px;
+  right: 24px;
+  background: var(--cedar);
+  color: #111;
+  border: none;
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+@media (max-width: 960px) {
+  .plateGrid { grid-template-columns: 1fr; }
+}
+
+@media print {
+  body { background: #fff !important; color: #111 !important; }
+  .top, .footer, .actions, .plateZoomHint, .lightbox { display: none !important; }
+  section, .pageHero { padding: 20px 0 !important; border: none !important; }
+  .plateGrid { grid-template-columns: 1fr !important; gap: 18px !important; }
+  .plateCard { break-inside: avoid; border: 1px solid #ccc !important; background: #fff !important; box-shadow: none !important; }
+  .plateBody h3, p, h1, h2 { color: #111 !important; }
+}
