@@ -1,0 +1,4 @@
+const size=document.getElementById('size'),finish=document.getElementById('finish'),kind=document.getElementById('kind'),label=document.getElementById('sizeLabel'),range=document.getElementById('range');
+const sizeNames={64:'64 sq ft (8×8)',80:'80 sq ft (8×10)',96:'96 sq ft (8×12)',112:'112 sq ft (8×14)',128:'128 sq ft (8×16)',144:'144 sq ft (12×12)',160:'160 sq ft (10×16)',192:'192 sq ft (12×16)',240:'240 sq ft (12×20)',288:'288 sq ft (12×24)'};
+function calc(){if(!size)return;const sqft=Number(size.value);const base=sqft*Number(kind.value)*Number(finish.value);const lo=Math.round(base*0.95/50)*50,hi=Math.round(base*1.12/50)*50;label.textContent=sizeNames[sqft]||(sqft+' sq ft');range.textContent='$'+lo.toLocaleString()+' – $'+hi.toLocaleString()+' CAD';}
+[size,finish,kind].filter(Boolean).forEach(el=>el.addEventListener('input',calc));calc();
