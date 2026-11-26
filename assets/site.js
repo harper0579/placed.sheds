@@ -12,6 +12,7 @@ if (menuBtn && mainNav) {
 const size = document.getElementById('size');
 const finish = document.getElementById('finish');
 const kind = document.getElementById('kind');
+const orientation = document.getElementById('orientation');
 const label = document.getElementById('sizeLabel');
 const range = document.getElementById('range');
 const depositEst = document.getElementById('depositEst');
@@ -71,13 +72,14 @@ function calcEstimator() {
   if (sendEstimateBtn) {
     const styleName = kind.options[kind.selectedIndex].dataset.name;
     const finishName = finish.options[finish.selectedIndex].dataset.name;
-    const summary = `Estimator Build: ${sizeText} ${styleName} | Siding: ${finishName} | Add-ons: ${selectedAddons.length ? selectedAddons.join(', ') : 'None'} | Est. Cash Range: $${lo.toLocaleString()}-$${hi.toLocaleString()} CAD`;
+    const orientName = orientation ? orientation.value : 'End Gable';
+    const summary = `Estimator Build: ${sizeText} ${styleName} (${orientName}) | Siding: ${finishName} | Add-ons: ${selectedAddons.length ? selectedAddons.join(', ') : 'None'} | Est. Cash Range: $${lo.toLocaleString()}-$${hi.toLocaleString()} CAD`;
     sendEstimateBtn.href = `contact.html?model=${encodeURIComponent('Custom Build from Estimator')}&details=${encodeURIComponent(summary)}`;
   }
 }
 
 if (size) {
-  [size, finish, kind].forEach(el => el.addEventListener('input', calcEstimator));
+  [size, finish, kind, orientation].forEach(el => { if (el) el.addEventListener('input', calcEstimator); });
   addons.forEach(cb => cb.addEventListener('change', calcEstimator));
   calcEstimator();
 }

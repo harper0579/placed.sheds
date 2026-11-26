@@ -1,3 +1,3 @@
-# PLACED Outdoor — Full Static Storefront
+# PLACED Outdoor — V2 Static Storefront
 
-Zero-backend static site hosted on Vercel (`placedsheds.vercel.app`) with Web3Forms lead routing to `info@placed.life`.
+Includes Porch Editions, End/Side Gable selector, PT Floor upgrade, NB permit & pad prep guidance, JSON-LD schema, and Web3Forms lead capture.

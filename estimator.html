@@ -4,8 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Interactive Shed Price Estimator | PLACED Outdoor</title>
-  <meta name="description" content="Calculate instant cash pricing and 30% deposit estimates for custom sheds and workshops in Southern New Brunswick.">
+  <meta name="description" content="Calculate instant cash pricing, porch add-ons, and 30% deposit estimates for custom sheds and workshops in Southern New Brunswick.">
   <link rel="stylesheet" href="assets/style.css">
+  
 </head>
 <body>
 <header class="top">
@@ -26,7 +27,7 @@
   <div class="wrap">
     <p class="eyebrow">Interactive Build Estimator</p>
     <h1>Configure your shed &amp; see instant cash pricing.</h1>
-    <p class="lede">Select your dimensions, roof style, and add-ons below to calculate an instant cash estimate and 30% deposit amount—then send your exact spec straight to our quote form with one click.</p>
+    <p class="lede">Select your dimensions, roof style, porch add-on, and floor upgrades below to calculate an instant cash estimate and 30% deposit—then send your exact spec straight to our quote form with one click.</p>
   </div>
 </section>
 
@@ -36,32 +37,40 @@
       <h2>Transparent numbers before we ever step on your yard.</h2>
       <p>Our estimator uses real Southern New Brunswick lumber and hardware pricing—not inflated Rent-to-Own monthly teasers.</p>
       <div class="notice" style="margin-bottom:20px">
-        <b>What is already included in every base price:</b><br>
+        <b>Included in every base price:</b><br>
         • Pressure-treated 4×4 skid foundation<br>
         • 2×4 framing at 16" on center<br>
         • 5/8" tongue-and-groove floor decking<br>
         • Primed LP SmartSide T1-11 exterior panels<br>
-        • Three-ribbed steel roof (or architectural shingles)<br>
+        • Three-ribbed 29-gauge steel roof (24" O.C. rib fastening)<br>
         • Free local delivery within 40 km of Quispamsis / Saint John (8×10 to 10×12)
       </div>
-      <p><small>Note: Final firm quotes confirm site grade, block leveling, and tight-access panel assembly if required. Prices shown are CAD before HST.</small></p>
+      <p><small>Note: Final firm quotes confirm site grade, pad leveling, and tight-access panel assembly if required. Prices shown are CAD before HST.</small></p>
     </div>
 
     <div class="estimator" id="estimatorApp">
-      <label>1. Shed Style
-        <select id="kind">
-          <option value="42" data-name="Utility / A-Frame Shed">Utility / A-Frame Shed (Standard Gable)</option>
-          <option value="47" data-name="Lofted Barn">Lofted Barn (High-Headroom Gambrel)</option>
-          <option value="56" data-name="Insulated Workshop / Studio">Insulated Workshop / Studio (R-12 Walls &amp; Roof)</option>
-        </select>
-      </label>
+      <div class="grid2" style="gap:12px">
+        <label>1. Shed Style
+          <select id="kind">
+            <option value="42" data-name="Utility / A-Frame Shed">Utility / A-Frame (Gable)</option>
+            <option value="47" data-name="Lofted Barn">Lofted Barn (Gambrel)</option>
+            <option value="54" data-name="Insulated Studio / Shell">Insulated Studio / Shell</option>
+          </select>
+        </label>
+        <label>Door Orientation
+          <select id="orientation">
+            <option value="End Gable (Doors on Gable End)">End Gable (Snow-Safe Entry)</option>
+            <option value="Side Gable (Doors on Long Wall)">Side Gable (Wide Side Entry)</option>
+          </select>
+        </label>
+      </div>
 
       <label>2. Footprint Size: <b id="sizeLabel" style="color:#B88652">8×12 (96 sq ft)</b>
         <input id="size" type="range" min="80" max="288" step="16" value="96">
         <div style="display:flex;justify-content:space-between;font-size:11px;color:#666;margin-top:4px">
           <span>8×10 (Campground)</span>
           <span>10×12</span>
-          <span>10×16</span>
+          <span>12×16</span>
           <span>12×24</span>
         </div>
       </label>
@@ -70,13 +79,15 @@
         <select id="finish">
           <option value="1" data-name="LP SmartSide T1-11">LP SmartSide T1-11 Panel (Standard)</option>
           <option value="1.12" data-name="Board & Batten / Painted">LP SmartSide + Factory Color / Batten Trim (+12%)</option>
-          <option value="1.18" data-name="Full Steel Exterior">Full 29-Gauge Steel Siding &amp; Trim (+18%)</option>
+          <option value="1.18" data-name="Full 29-Ga Steel Exterior">Full 29-Gauge Steel Siding &amp; Trim (+18%)</option>
         </select>
       </label>
 
       <div>
-        <label>4. Popular Add-Ons</label>
+        <label>4. Popular Add-Ons &amp; Upgrades</label>
         <div class="addonGrid">
+          <label class="addonItem"><input type="checkbox" class="addon" value="550" data-label="4-Ft Covered Front Porch"> 4' Covered Porch (+$550)</label>
+          <label class="addonItem"><input type="checkbox" class="addon" value="180" data-label="Pressure-Treated Floor Upgrade"> Full PT Floor Upgrade (+$180)</label>
           <label class="addonItem"><input type="checkbox" class="addon" value="185" data-label="Extra Slider Window"> Extra Window (+$185)</label>
           <label class="addonItem"><input type="checkbox" class="addon" value="240" data-label="Heavy PT Ramp"> Heavy PT Ramp (+$240)</label>
           <label class="addonItem"><input type="checkbox" class="addon" value="220" data-label="8-ft Built-In Workbench"> 8' Workbench (+$220)</label>
@@ -103,7 +114,7 @@
   <div>
     <b>PLACED Outdoor</b><br>
     Quispamsis · Rothesay · Kennebecasis Valley · Greater Saint John<br>
-    <small style="color:var(--muted)">100% Ground-Level Custom Sheds &amp; Backyard Structures · Cash &amp; E-Transfer Only</small>
+    <small style="color:var(--muted)">100% Ground-Level Custom Sheds, Baby Barns &amp; Backyard Structures · Cash &amp; E-Transfer Only</small>
   </div>
   <div style="text-align:right">
     <a href="mailto:info@placed.life" style="color:var(--cedar);font-weight:800">info@placed.life</a><br>
