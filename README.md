@@ -1,3 +1,3 @@
-# PLACED Outdoor — Sheds Static Site
+# PLACED Outdoor — Full Static Storefront
 
-Deploy this folder directly to Vercel, Netlify, Cloudflare Pages, or GitHub Pages.
+Zero-backend static site hosted on Vercel (`placedsheds.vercel.app`) with Web3Forms lead routing to `info@placed.life`.

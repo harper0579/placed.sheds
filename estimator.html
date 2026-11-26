@@ -1,2 +1,115 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Estimator | PLACED Outdoor</title><meta name="description" content="PLACED Outdoor — custom outdoor sheds and backyard structures built for New Brunswick weather across Quispamsis, Rothesay, KV, and Greater Saint John."><link rel="stylesheet" href="assets/style.css"></head><body class=""><header class="top"><a class="logo" href="index.html">PLACED<small>OUTDOOR</small></a><nav class="nav"><a href="sheds.html">Sheds</a><a href="estimator.html">Estimator</a><a href="process.html">Process</a><a href="gallery.html">Gallery</a><a href="faq.html">FAQ</a><a class="pill" href="contact.html">Book Site Visit</a></nav></header><main>
-<section class="pageHero"><div class="wrap"><p class="eyebrow">Planning estimator</p><h1>Get a planning range before the site visit.</h1><p class="lede">This estimator qualifies interest and sets expectations. It does not replace an on-site quote.</p></div></section><section class="split"><div><h2>Range first. Firm quote later.</h2><p>Final pricing depends on measurements, site conditions, access, materials, customization, and confirmed scope.</p></div><div class="estimator"><label>Shed style<select id="kind"><option value="42">Utility / A-Frame Shed</option><option value="48">Lofted Barn</option><option value="55">Insulated Workshop / Studio</option></select></label><label>Floor area <b id="sizeLabel">96 sq ft (8×12)</b><input id="size" type="range" min="64" max="288" step="16" value="96"></label><label>Finish / complexity<select id="finish"><option value="1">Standard</option><option value="1.3">Premium</option><option value="1.55">Custom / complex</option></select></label><div class="range" id="range">$9,200 – $13,000</div><p><small>This estimate is a planning range, not a final quote.</small></p><a class="btn primary full" href="contact.html">Book Site Visit</a></div></section></main><footer class="footer"><div><b>PLACED Outdoor</b><br>Quispamsis · Rothesay · KV · Greater Saint John</div><div>Custom sheds &amp; backyard structures · info@placed.life · Cash &amp; e-transfer builds</div></footer><script src="assets/site.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Interactive Shed Price Estimator | PLACED Outdoor</title>
+  <meta name="description" content="Calculate instant cash pricing and 30% deposit estimates for custom sheds and workshops in Southern New Brunswick.">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="top">
+  <a class="logo" href="index.html">PLACED<small>OUTDOOR</small></a>
+  <button class="menuBtn" id="menuBtn" aria-label="Toggle Menu" aria-expanded="false">☰</button>
+  <nav class="nav" id="mainNav">
+    <a href="sheds.html">Models &amp; Pricing</a>
+    <a href="estimator.html" class="active">Build Estimator</a>
+    <a href="process.html">How It Works</a>
+    <a href="gallery.html">Build Proof</a>
+    <a href="faq.html">FAQ</a>
+    <a class="pill" href="contact.html">Book Site Visit</a>
+  </nav>
+</header>
+<main>
+
+<section class="pageHero">
+  <div class="wrap">
+    <p class="eyebrow">Interactive Build Estimator</p>
+    <h1>Configure your shed &amp; see instant cash pricing.</h1>
+    <p class="lede">Select your dimensions, roof style, and add-ons below to calculate an instant cash estimate and 30% deposit amount—then send your exact spec straight to our quote form with one click.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap split">
+    <div>
+      <h2>Transparent numbers before we ever step on your yard.</h2>
+      <p>Our estimator uses real Southern New Brunswick lumber and hardware pricing—not inflated Rent-to-Own monthly teasers.</p>
+      <div class="notice" style="margin-bottom:20px">
+        <b>What is already included in every base price:</b><br>
+        • Pressure-treated 4×4 skid foundation<br>
+        • 2×4 framing at 16" on center<br>
+        • 5/8" tongue-and-groove floor decking<br>
+        • Primed LP SmartSide T1-11 exterior panels<br>
+        • Three-ribbed steel roof (or architectural shingles)<br>
+        • Free local delivery within 40 km of Quispamsis / Saint John (8×10 to 10×12)
+      </div>
+      <p><small>Note: Final firm quotes confirm site grade, block leveling, and tight-access panel assembly if required. Prices shown are CAD before HST.</small></p>
+    </div>
+
+    <div class="estimator" id="estimatorApp">
+      <label>1. Shed Style
+        <select id="kind">
+          <option value="42" data-name="Utility / A-Frame Shed">Utility / A-Frame Shed (Standard Gable)</option>
+          <option value="47" data-name="Lofted Barn">Lofted Barn (High-Headroom Gambrel)</option>
+          <option value="56" data-name="Insulated Workshop / Studio">Insulated Workshop / Studio (R-12 Walls &amp; Roof)</option>
+        </select>
+      </label>
+
+      <label>2. Footprint Size: <b id="sizeLabel" style="color:#B88652">8×12 (96 sq ft)</b>
+        <input id="size" type="range" min="80" max="288" step="16" value="96">
+        <div style="display:flex;justify-content:space-between;font-size:11px;color:#666;margin-top:4px">
+          <span>8×10 (Campground)</span>
+          <span>10×12</span>
+          <span>10×16</span>
+          <span>12×24</span>
+        </div>
+      </label>
+
+      <label>3. Exterior Siding &amp; Trim
+        <select id="finish">
+          <option value="1" data-name="LP SmartSide T1-11">LP SmartSide T1-11 Panel (Standard)</option>
+          <option value="1.12" data-name="Board & Batten / Painted">LP SmartSide + Factory Color / Batten Trim (+12%)</option>
+          <option value="1.18" data-name="Full Steel Exterior">Full 29-Gauge Steel Siding &amp; Trim (+18%)</option>
+        </select>
+      </label>
+
+      <div>
+        <label>4. Popular Add-Ons</label>
+        <div class="addonGrid">
+          <label class="addonItem"><input type="checkbox" class="addon" value="185" data-label="Extra Slider Window"> Extra Window (+$185)</label>
+          <label class="addonItem"><input type="checkbox" class="addon" value="240" data-label="Heavy PT Ramp"> Heavy PT Ramp (+$240)</label>
+          <label class="addonItem"><input type="checkbox" class="addon" value="220" data-label="8-ft Built-In Workbench"> 8' Workbench (+$220)</label>
+          <label class="addonItem"><input type="checkbox" class="addon" value="290" data-label="Overhead Storage Loft"> Overhead Loft (+$290)</label>
+          <label class="addonItem"><input type="checkbox" class="addon" value="350" data-label="Tight-Access Panel Assembly"> On-Site Panel Build (+$350)</label>
+          <label class="addonItem"><input type="checkbox" class="addon" value="160" data-label="Patio Block Leveling Kit"> Patio Block Kit (+$160)</label>
+        </div>
+      </div>
+
+      <div class="estSummary">
+        <span style="font-size:12px;text-transform:uppercase;letter-spacing:0.12em;color:var(--muted)">Estimated Cash Price (CAD before HST)</span>
+        <div class="range" id="range">$4,000 – $4,350 CAD</div>
+        <div class="depositLine" id="depositEst">30% Material Deposit: ~$1,200 – $1,305 CAD</div>
+        <span style="font-size:12px;color:var(--muted)" id="deliveryNote">Fits standard tilt-trailer delivery (no wide-load permit needed)</span>
+      </div>
+
+      <a class="btn primary full" id="sendEstimateBtn" href="contact.html">Send This Exact Build to Quote Form →</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="footer">
+  <div>
+    <b>PLACED Outdoor</b><br>
+    Quispamsis · Rothesay · Kennebecasis Valley · Greater Saint John<br>
+    <small style="color:var(--muted)">100% Ground-Level Custom Sheds &amp; Backyard Structures · Cash &amp; E-Transfer Only</small>
+  </div>
+  <div style="text-align:right">
+    <a href="mailto:info@placed.life" style="color:var(--cedar);font-weight:800">info@placed.life</a><br>
+    <small style="color:var(--muted)">30% Deposit Locks Winter Lumber Pricing · Zero Rent-to-Own Markups</small>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
+</body>
+</html>
