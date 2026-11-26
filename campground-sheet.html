@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>PLACED Outdoor — Campground &amp; Seasonal RV Lot Shed Spec &amp; Cash Comparison Sheet</title>
-  <meta name="description" content="1-page printable comparison of PLACED Outdoor cash-direct campground sheds vs. 36-month Rent-to-Own dealer contracts in Greater Saint John &amp; Southern NB.">
+  <title>PLACED Sheds — Greater Saint John &amp; KV Cash vs. 36-Month RTO Sheet</title>
+  <meta name="description" content="Complete 7-model PLACED Outdoor direct cash pricing vs. 36-month dealer Rent-to-Own comparison sheet for Greater Saint John, KV, and seasonal RV campgrounds.">
   <style>
     :root {
       --ink: #141917;
@@ -18,26 +18,26 @@
     * { box-sizing: border-box; }
     body {
       margin: 0;
-      padding: 24px;
+      padding: 20px;
       background: #e9e5dc;
       color: var(--ink);
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif;
-      line-height: 1.45;
+      line-height: 1.4;
     }
     .toolbar {
-      max-width: 850px;
-      margin: 0 auto 16px;
+      max-width: 920px;
+      margin: 0 auto 14px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
       flex-wrap: wrap;
     }
     .toolbar a, .toolbar button {
       background: var(--forest);
       color: #fff;
       border: none;
-      padding: 10px 18px;
+      padding: 9px 16px;
       border-radius: 999px;
       font-weight: 800;
       font-size: 13px;
@@ -46,12 +46,12 @@
     }
     .toolbar button.accent { background: var(--cedar); color: #111; }
     .sheet {
-      max-width: 850px;
+      max-width: 920px;
       margin: 0 auto;
       background: #fff;
       border: 1px solid var(--border);
       border-radius: 14px;
-      padding: 34px 38px;
+      padding: 28px 32px;
       box-shadow: 0 18px 50px rgba(0,0,0,0.12);
     }
     .topBar {
@@ -59,182 +59,207 @@
       justify-content: space-between;
       align-items: flex-start;
       border-bottom: 3px solid var(--forest);
-      padding-bottom: 14px;
-      margin-bottom: 18px;
-      gap: 16px;
+      padding-bottom: 12px;
+      margin-bottom: 14px;
+      gap: 14px;
     }
-    .brand { font-size: 24px; font-weight: 950; letter-spacing: 0.16em; color: var(--forest); }
-    .brand small { display: block; font-size: 10px; letter-spacing: 0.3em; color: var(--cedar); margin-top: 2px; }
+    .brand { font-size: 22px; font-weight: 950; letter-spacing: 0.14em; color: var(--forest); }
+    .brand small { display: block; font-size: 10px; letter-spacing: 0.24em; color: var(--cedar); margin-top: 2px; }
     .badge {
       background: var(--forest);
       color: #fff;
-      padding: 8px 14px;
+      padding: 7px 12px;
       border-radius: 8px;
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 800;
       text-align: right;
     }
-    h1 { font-size: 25px; line-height: 1.15; margin: 0 0 8px; letter-spacing: -0.03em; color: var(--forest); }
-    .sub { font-size: 14px; color: var(--muted); margin: 0 0 18px; }
-    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 18px; }
+    h1 { font-size: 22px; line-height: 1.15; margin: 0 0 6px; letter-spacing: -0.02em; color: var(--forest); }
+    .sub { font-size: 13px; color: var(--muted); margin: 0 0 14px; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 14px; font-size: 12px; }
+    th, td { border: 1px solid var(--border); padding: 7px 9px; text-align: left; }
+    th { background: var(--forest); color: #fff; font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; }
+    .win { background: #eef7f2; font-weight: 800; color: var(--green); }
+    .grid2 { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 14px; margin-bottom: 14px; }
     .box {
       background: var(--cream);
       border: 1px solid var(--border);
       border-radius: 10px;
-      padding: 14px 16px;
+      padding: 12px 14px;
     }
-    .box h3 { margin: 0 0 8px; font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--cedar); }
-    .box ul { margin: 0; padding-left: 18px; font-size: 13px; color: var(--ink); }
+    .box h3 { margin: 0 0 6px; font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--cedar); }
+    .box ul { margin: 0; padding-left: 16px; font-size: 12px; color: var(--ink); }
     .box li { margin-bottom: 4px; }
-    table { width: 100%; border-collapse: collapse; margin-bottom: 18px; font-size: 13px; }
-    th, td { border: 1px solid var(--border); padding: 10px 12px; text-align: left; }
-    th { background: var(--forest); color: #fff; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; }
-    .win { background: #eef7f2; font-weight: 800; color: var(--green); }
-    .rtoBox {
+    .managerBox {
       border: 2px solid var(--cedar);
       background: #fdf9f3;
       border-radius: 10px;
-      padding: 14px 18px;
-      margin-bottom: 18px;
+      padding: 12px 16px;
+      margin-bottom: 14px;
+      font-size: 12.5px;
     }
-    .rtoBox h2 { margin: 0 0 8px; font-size: 16px; color: var(--forest); }
-    .rtoGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; font-size: 13px; }
+    .managerBox h2 { margin: 0 0 5px; font-size: 14px; color: var(--forest); text-transform: uppercase; letter-spacing: 0.05em; }
     .footerRow {
       display: flex;
       justify-content: space-between;
       align-items: center;
       border-top: 2px solid var(--forest);
-      padding-top: 12px;
-      font-size: 13px;
+      padding-top: 10px;
+      font-size: 12px;
       gap: 12px;
     }
     .ctaPill {
       background: var(--cedar);
       color: #111;
       font-weight: 900;
-      padding: 8px 14px;
+      padding: 7px 13px;
       border-radius: 8px;
+      white-space: nowrap;
     }
     @media print {
       body { background: #fff; padding: 0; }
       .toolbar { display: none; }
-      .sheet { box-shadow: none; border: none; padding: 14px 18px; max-width: 100%; }
+      .sheet { box-shadow: none; border: none; padding: 10px 14px; max-width: 100%; }
     }
-    @media (max-width: 680px) {
-      .grid2, .rtoGrid, .topBar, .footerRow { grid-template-columns: 1fr; flex-direction: column; align-items: flex-start; }
+    @media (max-width: 720px) {
+      .grid2, .topBar, .footerRow { grid-template-columns: 1fr; flex-direction: column; align-items: flex-start; }
     }
   </style>
 </head>
 <body>
   <div class="toolbar">
     <a href="index.html">← Back to PLACED Outdoor</a>
-    <button class="accent" onclick="window.print()">Print / Save 1-Page PDF Sheet</button>
+    <button class="accent" onclick="window.print()">Print / Save 1-Page Flyer PDF</button>
   </div>
 
   <div class="sheet">
     <div class="topBar">
       <div>
-        <div class="brand">PLACED<small>OUTDOOR</small></div>
-        <div style="font-size:12px;color:var(--muted);margin-top:4px">Quispamsis · Rothesay · KV · Greater Saint John · Southern NB Campgrounds</div>
+        <div class="brand">PLACED SHEDS<small>GREATER SAINT JOHN &amp; KV</small></div>
+        <div style="font-size:11.5px;color:var(--muted);margin-top:3px">Serving: Quispamsis · Rothesay · Saint John · Grand Bay-Westfield · Surrounding Campgrounds &amp; RV Resorts</div>
       </div>
       <div class="badge">
-        WINTER / SPRING 2027 CAMPER SPECIAL<br>
-        <span style="color:#f3c898">30% Deposit Locks Lumber Pricing</span>
+        SPRING 2027 PRE-ORDER SPECIAL<br>
+        <span style="color:#f3c898">30% Deposit Locks Winter Lumber Rates</span>
       </div>
     </div>
 
-    <h1>Campground &amp; Seasonal RV Lot Sheds — Built for NB Weather</h1>
-    <p class="sub">Direct-from-builder cash &amp; e-transfer pricing. Built on removable pressure-treated 4×4 skids to meet seasonal RV park regulations—with zero 2× Rent-to-Own dealer financing markups.</p>
-
-    <div class="grid2">
-      <div class="box">
-        <h3>Park-Compliant Skid Construction</h3>
-        <ul>
-          <li><b>Removable Base:</b> Three 4×4 pressure-treated ground skids + 16" O.C. floor joists (no poured concrete required).</li>
-          <li><b>Zero-Sag Floor:</b> 5/8" tongue-and-groove subfloor (optional full PT decking for damp lots).</li>
-          <li><b>29-Ga Metal Roof Standard:</b> Three-ribbed steel fastened every 24" per rib for Atlantic snow &amp; wind loads.</li>
-          <li><b>LP SmartSide Exterior:</b> Primed, rot-resistant vertical siding + trimmed corners &amp; slider window.</li>
-        </ul>
-      </div>
-      <div class="box">
-        <h3>Popular Camper Add-Ons</h3>
-        <ul>
-          <li><b>4-Ft Covered Front Porch (+$500):</b> Keeps muddy boots, firewood, coolers &amp; chairs dry.</li>
-          <li><b>Basic Electrical Package (+$500):</b> 4 interior outlets, 2 switches, breaker-ready.</li>
-          <li><b>R-Value Wall &amp; Ceiling Insulation (+$950):</b> Four-season workshop or bunkie comfort.</li>
-          <li><b>Built-In Workbench ($28/lf) &amp; 3-Tier Shelving ($20/lf)</b></li>
-          <li><b>Compacted Gravel Pad Prep ($3.00/sq ft)</b></li>
-        </ul>
-      </div>
-    </div>
+    <h1>Built for Atlantic Winters. Priced Without the Middleman.</h1>
+    <p class="sub">Stop paying 2× for dealer lot financing. Traditional lots sell sheds on 36-month and 60-month "Rent-to-Own" (RTO) contracts that double your final payout. PLACED builds locally in the Kennebecasis Valley and sells direct via Cash &amp; Interac E-Transfer.</p>
 
     <table>
       <thead>
         <tr>
-          <th>Campground &amp; Yard Model</th>
-          <th>Footprint</th>
+          <th>Shed Model &amp; Size</th>
           <th>PLACED Cash Price</th>
           <th>30% Deposit</th>
-          <th>Competitor Lot Price</th>
-          <th>Instant Cash Savings</th>
+          <th>Typical Dealer Lot Tag</th>
+          <th>36-Mo. RTO</th>
+          <th>Total RTO Payout</th>
+          <th>Direct Savings</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td><b>8×10 Seasonal Lot Shed</b></td>
-          <td>80 sq ft</td>
-          <td class="win">$3,999 CAD</td>
+          <td><b>8×10 Utility / Baby Barn</b> (80 sq ft)</td>
+          <td class="win">$3,999</td>
           <td>$1,200</td>
-          <td>$4,175+ (plus metal roof fee)</td>
-          <td class="win">Save $176+ &amp; metal roof incl.</td>
+          <td>$4,175 – $4,695</td>
+          <td>~$193 / mo</td>
+          <td>$6,950+</td>
+          <td class="win">Save $2,951+</td>
         </tr>
         <tr>
-          <td><b>8×12 Utility / Baby Barn</b></td>
-          <td>96 sq ft</td>
-          <td class="win">$4,199 CAD</td>
+          <td><b>8×12 Camp / Storage Barn</b> (96 sq ft)</td>
+          <td class="win">$4,199</td>
           <td>$1,260</td>
-          <td>$4,475 – $5,265</td>
-          <td class="win">Save $276 – $1,066</td>
+          <td>$5,265 (Sale: $4,475)</td>
+          <td>~$207 / mo</td>
+          <td>$7,452+</td>
+          <td class="win">Save $3,253+</td>
         </tr>
         <tr>
-          <td><b>8×12 Covered Porch Edition</b></td>
-          <td>4' porch + 8' shed</td>
-          <td class="win">$4,699 CAD</td>
+          <td><b>8×12 RV Porch Edition</b> (4' Porch + 8' Shed)</td>
+          <td class="win">$4,699</td>
           <td>$1,410</td>
-          <td>$6,190 (custom porch quote)</td>
-          <td class="win">Save $1,491 immediately</td>
+          <td>$6,190 (Dealer Custom)</td>
+          <td>~$286 / mo</td>
+          <td>$10,296</td>
+          <td class="win">Save $5,597</td>
         </tr>
         <tr>
-          <td><b>10×12 Heavy Workshop</b></td>
-          <td>120 sq ft</td>
-          <td class="win">$4,950 CAD</td>
-          <td>$1,485</td>
-          <td>$5,623 – $6,615</td>
-          <td class="win">Save $673 – $1,665</td>
+          <td><b>10×12 Heavy Workshop</b> (120 sq ft)</td>
+          <td class="win">$4,950 – $5,199</td>
+          <td>$1,485 – $1,560</td>
+          <td>$6,615 (Sale: $5,622)</td>
+          <td>$260.31 / mo</td>
+          <td>$9,371.16</td>
+          <td class="win">Save $4,172 – $4,421</td>
+        </tr>
+        <tr>
+          <td><b>10×16 Campground Porch Suite</b> (4' + 12')</td>
+          <td class="win">$6,999</td>
+          <td>$2,100</td>
+          <td>$8,500 – $9,065</td>
+          <td>~$395 / mo</td>
+          <td>$14,220</td>
+          <td class="win">Save $7,221</td>
+        </tr>
+        <tr>
+          <td><b>10×16 Utility / Bunkie</b> (160 sq ft)</td>
+          <td class="win">$6,499</td>
+          <td>$1,950</td>
+          <td>$9,065 (Sale: $7,252)</td>
+          <td>$335.74 / mo</td>
+          <td>$12,086.64</td>
+          <td class="win">Save $5,587.64</td>
+        </tr>
+        <tr>
+          <td><b>12×16 Bunkie / Retreat</b> (192 sq ft)</td>
+          <td class="win">$7,499</td>
+          <td>$2,250</td>
+          <td>$9,545+ (Lot Base)</td>
+          <td>~$442 / mo</td>
+          <td>$15,912</td>
+          <td class="win">Save $8,413</td>
         </tr>
       </tbody>
     </table>
 
-    <div class="rtoBox">
-      <h2>Why Smart Campers Skip the 36-Month Rent-to-Own Trap</h2>
-      <div class="rtoGrid">
-        <div>
-          <b>Roadside Lot 36-Month RTO Contract (10×12 Shed):</b><br>
-          $260.31/mo × 36 months = <b>$9,371.16 total paid</b> (nearly double the shed's value in carrying charges).
-        </div>
-        <div>
-          <b>PLACED Outdoor Cash / E-Transfer Build (10×12 Shed):</b><br>
-          $1,485 deposit + $3,465 on delivery = <b>$4,950.00 total paid</b>. <span style="color:var(--green);font-weight:800">You keep $4,421 in your pocket.</span>
-        </div>
+    <div class="grid2">
+      <div class="box">
+        <h3>Why Property Owners &amp; Campers Choose PLACED</h3>
+        <ul>
+          <li><b>29-Gauge Steel Roofing:</b> 3-rib profile fastened 24" O.C. for Atlantic snow loads &amp; Bay of Fundy wind uplift.</li>
+          <li><b>Sub-Floor Built Like a House:</b> Heavy 4×4 PT ground skids, 16" O.C. joists, and 5/8" T&amp;G exterior decking.</li>
+          <li><b>LP SmartSide Siding:</b> Zinc-borate treated panels engineered against fungal decay, rot &amp; freeze-thaw cycles.</li>
+          <li><b>Sub-108 sq ft Permit Advantage:</b> 8×10 &amp; 8×12 footprints fit within Saint John's 10 m² (107 sq ft) permit exemption.</li>
+          <li><b>1-Day Narrow-Site Assembly:</b> Shop-prefabricated panel packages carried through tight gates &amp; RV setbacks in 1 day.</li>
+        </ul>
       </div>
+      <div class="box">
+        <h3>Spring 2027 Pre-Order &amp; Popular Add-Ons</h3>
+        <ul>
+          <li><b>Lock In Winter Lumber Rates:</b> 30% material deposit today secures your slot &amp; shields against spring price hikes.</li>
+          <li><b>Ready Before Gate Opening:</b> Delivered &amp; leveled on your gravel pad or blocks before parks open in May.</li>
+          <li><b>Rough-In Electrical Package (+$500):</b> Breaker-ready, 4 outlets, interior LED prep.</li>
+          <li><b>Built-In 8-ft Workbench (+$224):</b> Continuous framing tied into wall studs.</li>
+          <li><b>Double ATV / Mower Inswing Doors (+$350)</b></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="managerBox">
+      <h2>Campground Manager &amp; Multi-Lot Group Delivery Program</h2>
+      <b>Ordering 3 or more sheds for seasonal lot owners in the same park?</b> We coordinate a single multi-drop delivery day onto pre-leveled gravel pads or patio blocks—saving each camper <b>$200 off base delivery/setup</b> while keeping uniform architectural standards (LP SmartSide + 3-rib steel roofs on removable 4×4 PT skids) across your park.
     </div>
 
     <div class="footerRow">
       <div>
-        <b>Inspect Our Live Campground Spec Display Model Before Trailer Season Opens</b><br>
-        <span style="color:var(--muted)">Online Estimator, Permit Booklet &amp; Quotes: <b>placedsheds.vercel.app</b> · Email: <b>info@placed.life</b></span>
+        <b>Reserve Your Spring 2027 Build Slot — Cash &amp; Interac E-Transfer Direct</b><br>
+        <span style="color:var(--muted)">Online Estimator &amp; Permit Booklet: <b>placedsheds.vercel.app</b> · Direct Build Desk: <b>info@placed.life</b></span>
       </div>
-      <div class="ctaPill">Book Spring Delivery Slot →</div>
+      <div class="ctaPill">30% Deposit Locks Price →</div>
     </div>
   </div>
 </body>
