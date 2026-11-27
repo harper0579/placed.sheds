@@ -1,8 +1,8 @@
 # PLaCED Outdoor — V10 Reconciled Pricing, HST & B2B ROI Ledger
 
 ## Payment, Tax & Batching Rules
-- **Accepted Payment:** Cash or Interac E-Transfer only.
-- **NB HST Rule:** All published prices are **Cash Price + 15% NB HST**.
+- **Accepted Payment:** All major payment methods accepted (credit, debit, Interac e-transfer, cash).
+- **NB HST Rule:** All published prices are **Base Price + 15% NB HST**.
 - **Deposit Rule:** **30% material-lock deposit** calculated on pre-tax net cash (`Math.round(netCash * 0.30)`).
 - **Group Batching:** `3–5 park units = $250 off per unit` on coordinated single-park drops.
 - **Trade Electrical Allowance:** `$400/hub` (`$400` on Pro Wired; `$800` two-circuit or `$400` single-pass on King Solar).

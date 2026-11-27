@@ -7,7 +7,7 @@ export default async function handler(req, res) {
     return res.status(503).json({
       ok: false,
       fallback: true,
-      message: "Direct email relay active — opening info@placed.life draft."
+      message: "Direct email relay active — opening email draft."
     });
   }
   try {

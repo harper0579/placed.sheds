@@ -328,7 +328,7 @@ function recalcPlacedQuote() {
     `Model: ${title}`,
     selectedItems.length ? `Add-Ons: ${selectedItems.join(", ")}` : "Add-Ons: Standard Base Package",
     batchDiscount > 0 ? `Group Batching: -$${batchDiscount} (3–5 Park Units)` : null,
-    `Pre-Tax Cash Price: $${cashSubtotal.toLocaleString("en-CA")} CAD`,
+    `Pre-Tax Subtotal: $${cashSubtotal.toLocaleString("en-CA")} CAD`,
     `15% NB HST: $${hst15.toFixed(2)} CAD`,
     `Total w/ HST: $${totalWithHst.toFixed(2)} CAD`,
     `30% Material-Lock Deposit (Pre-Tax): $${deposit30.toLocaleString("en-CA")} CAD`
@@ -487,7 +487,7 @@ function initContactForm() {
       if (res.ok && data.ok) {
         statusEl.style.display = "block";
         statusEl.className = "card card-green";
-        statusEl.innerHTML = "<strong>Request received!</strong> We will reply from <strong>info@placed.life</strong> to confirm your lot walkthrough and 30% e-transfer deposit instructions.";
+        statusEl.innerHTML = "<strong>Request received!</strong> Our shop desk will follow up shortly to confirm your lot walkthrough and build-week schedule.";
         form.reset();
         submitBtn.textContent = "Sent ✓";
         return;
@@ -497,10 +497,10 @@ function initContactForm() {
       const mailBody = encodeURIComponent(
         `Name: ${payload.name}\nEmail: ${payload.email}\nTown / Campground: ${payload.location}\n\nSelected Build:\n${payload.configuration}\n\nNotes:\n${payload.message}`
       );
-      window.location.href = `mailto:info@placed.life?subject=${encodeURIComponent(payload.subject)}&body=${mailBody}`;
+      window.location.href = `mailto:placed.sj@gmail.com?subject=${encodeURIComponent(payload.subject)}&body=${mailBody}`;
       statusEl.style.display = "block";
       statusEl.className = "card card-highlight";
-      statusEl.innerHTML = "Opening your email client addressed to <strong>info@placed.life</strong> with your complete build configuration attached.";
+      statusEl.innerHTML = "Opening your email app with your complete build configuration attached.";
       submitBtn.disabled = false;
       submitBtn.textContent = "Send Build Request →";
     }
