@@ -534,8 +534,30 @@ function toggleAllPamphletPages() {
   }
 }
 
+function applyEstimatorUrlParams() {
+  const params = new URLSearchParams(window.location.search);
+  const mode = params.get("mode");
+  const tier = params.get("tier");
+  const model = params.get("model");
+  const batch = params.get("batch");
+
+  if (batch && document.getElementById("park-batch-discount")) {
+    document.getElementById("park-batch-discount").value = batch;
+  }
+  if (mode === "shed") {
+    setEstimatorMode("shed");
+    if (model && document.getElementById("shed-model") && SHED_MODELS[model]) {
+      document.getElementById("shed-model").value = model;
+    }
+  } else if (tier && document.getElementById("station-tier") && STATION_TIERS[tier]) {
+    setEstimatorMode("station");
+    document.getElementById("station-tier").value = tier;
+  }
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   renderAddonControls();
+  applyEstimatorUrlParams();
   recalcPlacedQuote();
   initContactForm();
   if (!document.getElementById("quote-cash-price") && document.getElementById("station-2d-svg")) {
