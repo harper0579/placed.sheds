@@ -1,0 +1,5 @@
+docs/
+reference-backends/
+.env
+.env.*
+!.env.example

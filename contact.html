@@ -1,120 +1,139 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Book a Site Visit & Request Quote | PLACED Outdoor</title>
-  <meta name="description" content="Request a firm shed quote or site visit in Quispamsis, Rothesay, KV, or Greater Saint John.">
-  <link rel="stylesheet" href="assets/style.css">
-  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lock Your Build Slot or Request a Quote | PLaCED Outdoor Sheds</title>
+  <meta name="description" content="Send your configured 18x10 Full Station or Shed spec to info@placed.life to schedule a Southern NB lot walkthrough.">
+  <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-<header class="top">
-  <a class="logo" href="index.html">PLACED<small>OUTDOOR</small></a>
-  <button class="menuBtn" id="menuBtn" aria-label="Toggle Menu" aria-expanded="false">☰</button>
-  <nav class="nav" id="mainNav">
-    <a href="sheds.html">Models &amp; Pricing</a>
-    <a href="booklet.html">Permit Booklet</a>
-    <a href="estimator.html">Build Estimator</a>
-    <a href="process.html">How It Works</a>
-    <a href="gallery.html">Build Proof</a>
-    <a href="guides.html">Buyer's Guides</a>
-    <a href="master-guide.html">Master Guide</a>
-    <a href="faq.html">FAQ</a>
-    <a class="pill" href="contact.html">Book Site Visit</a>
-  </nav>
-</header>
-<main>
-
-<section class="pageHero">
-  <div class="wrap">
-    <p class="eyebrow">Request a Quote / Site Visit</p>
-    <h1>Lock in your build slot or ask a question.</h1>
-    <p class="lede">Send your preferred size, community, and yard access notes below. Messages go straight to our build desk at <b>info@placed.life</b>.</p>
-  </div>
-</section>
-
-<section>
-  <div class="wrap split">
-    <div>
-      <h2>What happens after you submit?</h2>
-      <p>We review your dimensions and site access notes within 24 hours and reply with a firm cash quote, material breakdown, and available build dates.</p>
-      <div class="notice" style="margin-bottom:20px">
-        <b>Direct Build Desk:</b> <a href="mailto:info@placed.life" style="text-decoration:underline">info@placed.life</a><br>
-        <b>Service Area:</b> Quispamsis · Rothesay · KV · Greater Saint John · Local Campgrounds<br>
-        <b>Payment Terms:</b> 30% deposit via e-transfer/cash · 70% on delivery
-      </div>
-      <p><small>Tip: Mention if your backyard has a narrow gate, fence, or septic bed so we can quote panelized on-site assembly if needed.</small></p>
+  <header class="site-header">
+    <div class="wrap nav-inner">
+      <a href="index.html" class="brand-mark" aria-label="PLaCED Outdoor Home">
+        <img src="assets/logos/placed-shed-a-white.svg" alt="PLaCED Outdoor — Make this place your home" style="height:44px;width:auto;">
+      </a>
+      <button class="mobile-toggle" type="button" onclick="toggleMobileNav()">Menu ☰</button>
+      <nav id="main-nav" class="nav-links" aria-label="Primary Navigation">
+        <a href="index.html">Home</a>
+        <a href="full-station.html">18×10 Full Station</a>
+        <a href="sheds.html">Sheds & Bunkies</a>
+        <a href="estimator.html">Live Estimator</a>
+        <a href="partner-program.html">Campground B2B</a>
+        <a href="handbook.html">Venture Handbook</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="process.html">1-Day Install</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html" class="active nav-cta">Lock Build Slot</a>
+      </nav>
     </div>
+  </header>
 
-    <form class="formBox" action="https://api.web3forms.com/submit" method="POST">
-      <input type="hidden" name="access_key" value="9bcea759-1142-4e15-ac8c-6565cff53b10">
-      <input type="hidden" name="subject" value="New PLACED Outdoor Shed Quote Request">
-      <input type="hidden" name="from_name" value="PLACED Outdoor Website">
-      <input type="checkbox" name="botcheck" style="display:none">
-
-      <label>Your Name *
-        <input name="name" required placeholder="First &amp; Last Name">
-      </label>
-
-      <div class="grid2" style="gap:12px">
-        <label>Email Address *
-          <input name="email" type="email" required placeholder="you@example.com">
-        </label>
-        <label>Phone (Optional — for text/call)
-          <input name="phone" placeholder="(506) 555-0199">
-        </label>
+  <main>
+    <section style="padding:3.25rem 0 2.5rem;">
+      <div class="wrap">
+        <span class="pill pill-cedar">Direct Shop Desk · info@placed.life</span>
+        <h1 class="h1" style="margin-top:0.85rem;">Lock In Your Build Slot.</h1>
+        <p class="lead">
+          Send your configuration below to schedule a lot walkthrough in Quispamsis, Kennebecasis Valley, Saint John, or Southern NB.
+          We reply from <strong>info@placed.life</strong> with pad guidelines and 30% pre-tax Interac e-transfer instructions.
+        </p>
       </div>
+    </section>
 
-      <div class="grid2" style="gap:12px">
-        <label>Shed Model / Size
-          <select name="shed_model" id="modelSelect">
-            <option value="8x10 Campground Shed ($3,999)">8×10 Campground Shed ($3,999)</option>
-            <option value="8x12 Utility Shed ($4,199)" selected>8×12 Utility / Baby Barn ($4,199)</option>
-            <option value="10x12 Workshop Shed ($4,950)">10×12 Workshop / Storage ($4,950)</option>
-            <option value="Covered Porch Shed">Covered Porch Edition (8×12 / 10×16)</option>
-            <option value="12x16 Heavy Workshop / Retreat ($7,499)">12×16 Heavy Workshop / Retreat ($7,499)</option>
-            <option value="12x20 Insulated Studio Shell ($9,499)">12×20 Insulated Studio / Shell ($9,499)</option>
-            <option value="Garden Suite / ADU Package">Garden Suite / ADU Package (With Permit Booklet)</option>
-            <option value="Custom Build from Estimator">Custom Build from Estimator</option>
-          </select>
-        </label>
+    <section class="section">
+      <div class="wrap grid-2" style="align-items:start;">
+        <div class="card">
+          <div id="prefilled-quote-banner" class="card card-green" style="display:none;margin-bottom:1.1rem;"></div>
+          <form id="placed-contact-form" style="display:grid;gap:0.95rem;">
+            <div>
+              <label for="contact-name" class="kicker" style="display:block;margin-bottom:0.35rem;">Your Name *</label>
+              <input id="contact-name" type="text" required class="cfg-input" placeholder="Full name">
+            </div>
+            <div>
+              <label for="contact-email" class="kicker" style="display:block;margin-bottom:0.35rem;">Email Address *</label>
+              <input id="contact-email" type="email" required class="cfg-input" placeholder="you@example.com">
+            </div>
+            <div>
+              <label for="contact-location" class="kicker" style="display:block;margin-bottom:0.35rem;">Town or Campground / Lot # *</label>
+              <input id="contact-location" type="text" required class="cfg-input" placeholder="e.g., Quispamsis / Seasonal Park Lot #">
+            </div>
+            <div>
+              <label for="contact-configuration" class="kicker" style="display:block;margin-bottom:0.35rem;">Selected Build & Pricing Summary</label>
+              <textarea id="contact-configuration" rows="3" class="cfg-input" placeholder="18×10 Full Station Rung 4 ($5,299 + HST) or Shed model"></textarea>
+            </div>
+            <div>
+              <label for="contact-message" class="kicker" style="display:block;margin-bottom:0.35rem;">Lot Notes, Mirror Orientation or Group Batch Info</label>
+              <textarea id="contact-message" rows="4" class="cfg-input" placeholder="Tell us about pad access, left/right wing orientation, or 3–5 unit campground group orders..."></textarea>
+            </div>
+            <button type="submit" id="contact-submit-btn" class="btn btn-primary" style="width:100%;">Send Build Request →</button>
+          </form>
+          <div id="contact-status" style="display:none;margin-top:1rem;"></div>
+        </div>
 
-        <label>Community / Location
-          <select name="community">
-            <option>Quispamsis</option>
-            <option>Rothesay</option>
-            <option>Kennebecasis Valley</option>
-            <option>Saint John</option>
-            <option>Grand Bay-Westfield</option>
-            <option>Hampton / Sussex Area</option>
-            <option>Local Campground / RV Park</option>
-            <option>Other Southern NB</option>
-          </select>
-        </label>
+        <div style="display:grid;gap:1.1rem;">
+          <div class="card card-highlight">
+            <div class="kicker">How Booking Works</div>
+            <h3 class="h3" style="margin-top:0.4rem;">Zero-Debt Cash & E-Transfer Milestones</h3>
+            <ul style="list-style:none;padding:0;margin:0.85rem 0 0;display:grid;gap:0.65rem;color:var(--muted);font-size:0.92rem;">
+              <li><strong style="color:var(--text);">1. Site & Setback Check:</strong> Free delivery within 40 km of Quispamsis / Saint John; pad prep (+$350) available if needed.</li>
+              <li><strong style="color:var(--text);">2. 30% Pre-Tax Deposit:</strong> Locks lumber, LP SmartSide, and 29-ga steel materials and reserves your build week.</li>
+              <li><strong style="color:var(--text);">3. 1-Day Placement & Final Balance:</strong> Balance + 15% NB HST due upon on-site assembly and licensed electrician sign-off.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="kicker">Direct Email</div>
+            <h3 class="h3" style="margin-top:0.35rem;"><a href="mailto:info@placed.life">info@placed.life</a></h3>
+            <p style="color:var(--muted);font-size:0.9rem;margin-top:0.4rem;">
+              Need to adjust your configuration first? Jump back to the <a href="estimator.html" style="color:var(--cedar-light);text-decoration:underline;">Live Estimator</a>.
+            </p>
+          </div>
+        </div>
       </div>
+    </section>
+  </main>
 
-      <label>Project Details, Add-Ons &amp; Yard Access Notes
-        <textarea name="details" id="detailsBox" placeholder="Tell us your target timeline, desired add-ons (4' porch, PT floor, ramp, extra window, loft), and whether a truck/trailer can reach the pad."></textarea>
-      </label>
-
-      <button class="btn primary full" type="submit">Send Quote Request →</button>
-    </form>
-  </div>
-</section>
-
-</main>
-<footer class="footer">
-  <div>
-    <b>PLACED Outdoor</b><br>
-    Quispamsis · Rothesay · Kennebecasis Valley · Greater Saint John<br>
-    <small style="color:var(--muted)">100% Ground-Level Custom Sheds, Baby Barns &amp; Backyard Structures · Cash &amp; E-Transfer Only</small>
-  </div>
-  <div style="text-align:right">
-    <a href="mailto:info@placed.life" style="color:var(--cedar);font-weight:800">info@placed.life</a><br>
-    <small style="color:var(--muted)">30% Deposit Locks Winter Lumber Pricing · Zero Rent-to-Own Markups</small>
-  </div>
-</footer>
-<script src="assets/site.js"></script>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="grid-3">
+        <div>
+          <img src="assets/logos/placed-shed-a-white.svg" alt="PLaCED Outdoor" style="height:46px;width:auto;">
+          <p style="color:var(--muted);font-size:0.9rem;margin-top:0.85rem;">
+            Custom off-grid camp hubs, golf-cart stations, and panelized sheds built in Quispamsis & Saint John, NB.
+            <strong>Make this place your home.</strong>
+          </p>
+          <p class="mono" style="font-size:0.76rem;color:var(--cedar-light);margin-top:0.5rem;">
+            Cash or Interac E-Transfer Only · All prices + 15% NB HST · 30% pre-tax deposit locks build slot.
+          </p>
+        </div>
+        <div>
+          <div class="kicker">Station & Park Docs</div>
+          <ul style="list-style:none;padding:0;margin:0.75rem 0 0;display:grid;gap:0.45rem;font-size:0.9rem;">
+            <li><a href="full-station.html">18×10 Full Station Architecture</a></li>
+            <li><a href="pamphlet.html">Printable 6-Page Station Pamphlet</a></li>
+            <li><a href="campground-sheet.html">1-Page Cash vs. 36-Mo RTO Matrix</a></li>
+            <li><a href="partner-program.html">Campground Manager ROI Program</a></li>
+            <li><a href="assets/pdf/The-Full-Station-Schematics.pdf" target="_blank" rel="noopener">Download Schematics PDF ↗</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="kicker">Direct Shop Desk</div>
+          <p style="font-size:0.92rem;margin-top:0.75rem;">
+            <strong><a href="mailto:info@placed.life">info@placed.life</a></strong><br>
+            <span style="color:var(--muted);">Quispamsis · Kennebecasis Valley · Saint John · Southern NB</span>
+          </p>
+          <div class="btn-row" style="margin-top:0.9rem;">
+            <a href="estimator.html" class="btn btn-primary">Configure & Price</a>
+            <a href="contact.html" class="btn">Book Walkthrough</a>
+          </div>
+        </div>
+      </div>
+      <div style="border-top:1px solid var(--line);margin-top:2rem;padding-top:1.25rem;display:flex;flex-wrap:wrap;justify-content:space-between;gap:0.75rem;font-size:0.8rem;color:var(--faint);">
+        <span>© 2026 PLaCED Outdoor Sheds · Always Harper.</span>
+        <span class="mono">Electrical circuits & solar tie-ins installed & signed off by licensed NB electrician.</span>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/site.js"></script>
 </body>
 </html>

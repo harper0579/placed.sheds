@@ -1,129 +1,197 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Interactive Shed Price Estimator | PLACED Outdoor</title>
-  <meta name="description" content="Calculate instant cash pricing, porch add-ons, and 30% deposit estimates for custom sheds and workshops in Southern New Brunswick.">
-  <link rel="stylesheet" href="assets/style.css">
-  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Build Configurator & Estimator | PLaCED Outdoor Sheds</title>
+  <meta name="description" content="Interactive 18x10 Full Station and Standard Shed configurator with automatic bundle locking, Safety Locker Duo credit, 15% NB HST, and 30% pre-tax deposit calculation.">
+  <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-<header class="top">
-  <a class="logo" href="index.html">PLACED<small>OUTDOOR</small></a>
-  <button class="menuBtn" id="menuBtn" aria-label="Toggle Menu" aria-expanded="false">☰</button>
-  <nav class="nav" id="mainNav">
-    <a href="sheds.html">Models &amp; Pricing</a>
-    <a href="booklet.html">Permit Booklet</a>
-    <a href="estimator.html" class="active">Build Estimator</a>
-    <a href="process.html">How It Works</a>
-    <a href="gallery.html">Build Proof</a>
-    <a href="guides.html">Buyer's Guides</a>
-    <a href="master-guide.html">Master Guide</a>
-    <a href="faq.html">FAQ</a>
-    <a class="pill" href="contact.html">Book Site Visit</a>
-  </nav>
-</header>
-<main>
-
-<section class="pageHero">
-  <div class="wrap">
-    <p class="eyebrow">Interactive Build Estimator</p>
-    <h1>Configure your shed &amp; see instant cash pricing.</h1>
-    <p class="lede">Select your dimensions, roof style, porch add-on, and floor upgrades below to calculate an instant cash estimate and 30% deposit—then send your exact spec straight to our quote form with one click.</p>
-  </div>
-</section>
-
-<section>
-  <div class="wrap split">
-    <div>
-      <h2>Transparent numbers before we ever step on your yard.</h2>
-      <p>Our estimator uses real Southern New Brunswick lumber and hardware pricing—not inflated Rent-to-Own monthly teasers.</p>
-      <div class="notice" style="margin-bottom:20px">
-        <b>Included in every base price:</b><br>
-        • Pressure-treated 4×4 skid foundation<br>
-        • 2×4 framing at 16" on center<br>
-        • 5/8" tongue-and-groove floor decking<br>
-        • Primed LP SmartSide T1-11 exterior panels<br>
-        • Three-ribbed 29-gauge steel roof (24" O.C. rib fastening)<br>
-        • Free local delivery within 40 km of Quispamsis / Saint John (8×10 to 10×12)
-      </div>
-      <p><small>Note: Final firm quotes confirm site grade, pad leveling, and tight-access panel assembly if required. Prices shown are CAD before HST.</small></p>
+  <header class="site-header">
+    <div class="wrap nav-inner">
+      <a href="index.html" class="brand-mark" aria-label="PLaCED Outdoor Home">
+        <img src="assets/logos/placed-shed-a-white.svg" alt="PLaCED Outdoor — Make this place your home" style="height:44px;width:auto;">
+      </a>
+      <button class="mobile-toggle" type="button" onclick="toggleMobileNav()">Menu ☰</button>
+      <nav id="main-nav" class="nav-links" aria-label="Primary Navigation">
+        <a href="index.html">Home</a>
+        <a href="full-station.html">18×10 Full Station</a>
+        <a href="sheds.html">Sheds & Bunkies</a>
+        <a href="estimator.html" class="active">Live Estimator</a>
+        <a href="partner-program.html">Campground B2B</a>
+        <a href="handbook.html">Venture Handbook</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="process.html">1-Day Install</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html" class="nav-cta">Lock Build Slot</a>
+      </nav>
     </div>
+  </header>
 
-    <div class="estimator" id="estimatorApp">
-      <div class="grid2" style="gap:12px">
-        <label>1. Shed Style
-          <select id="kind">
-            <option value="42" data-name="Utility / A-Frame Shed">Utility / A-Frame (Gable)</option>
-            <option value="47" data-name="Lofted Barn">Lofted Barn (Gambrel)</option>
-            <option value="54" data-name="Insulated Studio / Shell">Insulated Studio / Shell</option>
-          </select>
-        </label>
-        <label>Door Orientation
-          <select id="orientation">
-            <option value="End Gable (Doors on Gable End)">End Gable (Snow-Safe Entry)</option>
-            <option value="Side Gable (Doors on Long Wall)">Side Gable (Wide Side Entry)</option>
-          </select>
-        </label>
-      </div>
-
-      <label>2. Footprint Size: <b id="sizeLabel" style="color:#B88652">8×12 (96 sq ft)</b>
-        <input id="size" type="range" min="80" max="288" step="16" value="96">
-        <div style="display:flex;justify-content:space-between;font-size:11px;color:#666;margin-top:4px">
-          <span>8×10 (Campground)</span>
-          <span>10×12</span>
-          <span>12×16</span>
-          <span>12×24</span>
-        </div>
-      </label>
-
-      <label>3. Exterior Siding &amp; Trim
-        <select id="finish">
-          <option value="1" data-name="LP SmartSide T1-11">LP SmartSide T1-11 Panel (Standard)</option>
-          <option value="1.12" data-name="Board & Batten / Painted">LP SmartSide + Factory Color / Batten Trim (+12%)</option>
-          <option value="1.18" data-name="Full 29-Ga Steel Exterior">Full 29-Gauge Steel Siding &amp; Trim (+18%)</option>
-        </select>
-      </label>
-
-      <div>
-        <label>4. Popular Add-Ons &amp; Upgrades</label>
-        <div class="addonGrid">
-          <label class="addonItem"><input type="checkbox" class="addon" value="500" data-label="4-Ft Covered Front Porch"> 4' Covered Porch (+$500)</label>
-          <label class="addonItem"><input type="checkbox" class="addon" value="500" data-label="Basic Electrical Package (4 Outlets + 2 Switches)"> Basic Electrical Pkg (+$500)</label>
-          <label class="addonItem"><input type="checkbox" class="addon" value="950" data-label="Wall & Ceiling Insulation Package"> R-Value Insulation (+$950)</label>
-          <label class="addonItem"><input type="checkbox" class="addon" value="240" data-label="Extra 24x36 Low-E Window"> Extra 24×36 Window (+$240)</label>
-          <label class="addonItem"><input type="checkbox" class="addon" value="224" data-label="8-ft Built-In Workbench"> 8' Workbench (+$224)</label>
-          <label class="addonItem"><input type="checkbox" class="addon" value="120" data-label="6-ft 3-Tier Storage Shelving"> 6' 3-Tier Shelving (+$120)</label>
-          <label class="addonItem"><input type="checkbox" class="addon" value="350" data-label="Additional Double Door"> Extra Double Door (+$350)</label>
-          <label class="addonItem"><input type="checkbox" class="addon" value="360" data-label="Compacted Gravel Foundation Pad"> Gravel Pad Prep (+$360)</label>
+  <main>
+    <section style="padding:3rem 0 2rem;">
+      <div class="wrap">
+        <span class="pill pill-cedar">Real-Time Cash, Deposit & NB HST Calculator</span>
+        <h1 class="h1" style="margin-top:0.75rem;">Configure Your PLaCED Build.</h1>
+        <p class="lead">
+          Select either the <strong>18×10 Full Station Camp Hub (Mode A)</strong> or a <strong>Standard Shed / Bunkie (Mode B)</strong>.
+          Bundles automatically lock included equipment at $0 so you are never double-charged.
+        </p>
+        <div class="btn-row">
+          <button type="button" id="tab-station" class="btn btn-primary" onclick="setEstimatorMode('station')">Mode A: 18×10 Full Station</button>
+          <button type="button" id="tab-shed" class="btn" onclick="setEstimatorMode('shed')">Mode B: Standard Sheds & Bunkies</button>
         </div>
       </div>
+    </section>
 
-      <div class="estSummary">
-        <span style="font-size:12px;text-transform:uppercase;letter-spacing:0.12em;color:var(--muted)">Estimated Cash Price (CAD before HST)</span>
-        <div class="range" id="range">$4,000 – $4,350 CAD</div>
-        <div class="depositLine" id="depositEst">30% Material Deposit: ~$1,200 – $1,305 CAD</div>
-        <span style="font-size:12px;color:var(--muted)" id="deliveryNote">Fits standard tilt-trailer delivery (no wide-load permit needed)</span>
+    <section class="section-tight" style="padding-bottom:4rem;">
+      <div class="wrap cfg-grid">
+        <div style="display:grid;gap:1.25rem;">
+          <div id="panel-station" style="display:grid;gap:1.25rem;">
+            <div class="card">
+              <label for="station-tier" class="kicker" style="display:block;margin-bottom:0.5rem;">1. Choose 18×10 Base Rung or Turnkey Bundle</label>
+              <select id="station-tier" class="cfg-select" onchange="recalcPlacedQuote()">
+                <option value="bundle_pro">Bundle 1: Pro Wired & Safety Station — $6,899 (Save $338)</option>
+                <option value="bundle_king">Bundle 2: King of Scenic View Solar — $9,999 (Save $993 vs Pro+Add-Ons)</option>
+                <option value="rung_4" selected>Rung 4: Single 7×7 Steel Roll-Up (Flagship) — $5,299</option>
+                <option value="rung_1">Rung 1: Open Canopy (Summer Cruiser) — $4,499</option>
+                <option value="rung_2">Rung 2: Winter Canvas Closure — $4,799</option>
+                <option value="rung_3">Rung 3: Fitted LP Wood Panels — $4,999</option>
+                <option value="rung_5">Rung 5: Dual 7×7 Steel Roll-Ups (Drive-Thru) — $6,299</option>
+              </select>
+              <p id="active-model-desc" style="color:var(--muted);font-size:0.9rem;margin-top:0.75rem;"></p>
+            </div>
+
+            <div class="card" id="station-svg-card">
+              <div class="kicker" style="margin-bottom:0.65rem;">Live 2D Architectural Preview</div>
+              <div id="station-2d-svg"></div>
+            </div>
+
+            <div class="card">
+              <div class="kicker" style="margin-bottom:0.65rem;">2. Select A-La-Carte Upgrades (Safety Duo Auto-Credits -$91)</div>
+              <div id="station-addons-list" style="display:grid;gap:0.55rem;"></div>
+            </div>
+          </div>
+
+          <div id="panel-shed" style="display:none;gap:1.25rem;">
+            <div class="card">
+              <label for="shed-model" class="kicker" style="display:block;margin-bottom:0.5rem;">1. Choose Standard Shed or Bunkie Footprint</label>
+              <select id="shed-model" class="cfg-select" onchange="recalcPlacedQuote()">
+                <option value="shed_8x10">8×10 Utility / Baby Barn (80 sq ft) — $3,999</option>
+                <option value="shed_8x12">8×12 Camp / Gable Storage Barn (96 sq ft) — $4,199</option>
+                <option value="shop_10x12">10×12 Heavy Workshop (120 sq ft) — $4,950</option>
+                <option value="bunkie_12x16" selected>12×16 Bunkie / Heavy Workshop (192 sq ft) — $6,499</option>
+                <option value="loft_12x20">12×20 Lofted Barn w/ Mezzanine (240 sq ft) — $9,499</option>
+                <option value="porch_8x12">8×12 RV Porch Edition — Quote on Request</option>
+                <option value="porch_10x16">10×16 Campground Porch Suite — Quote on Request</option>
+              </select>
+            </div>
+            <div class="card">
+              <div class="kicker" style="margin-bottom:0.65rem;">2. Select Shed Upgrades</div>
+              <div id="shed-addons-list" style="display:grid;gap:0.55rem;"></div>
+            </div>
+          </div>
+
+          <div class="card">
+            <label for="park-batch-discount" class="kicker" style="display:block;margin-bottom:0.5rem;">3. Campground Group Batching (Single Drop Week)</label>
+            <select id="park-batch-discount" class="cfg-select" onchange="recalcPlacedQuote()">
+              <option value="0" selected>Individual Lot Drop ($0 batch discount)</option>
+              <option value="250">3–5 Park Units Coordinated Drop (-$250 off per unit)</option>
+            </select>
+          </div>
+        </div>
+
+        <aside class="card card-highlight summary-sticky">
+          <div class="kicker">Live Quote Summary (CAD)</div>
+          <div id="quote-savings-badges" style="margin-top:0.35rem;"></div>
+
+          <div id="live-pricing-block" style="margin-top:1rem;">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:0.75rem;">
+              <span style="color:var(--muted);font-weight:700;">Net Cash Subtotal</span>
+              <span id="quote-cash-price" style="font-size:2.35rem;font-weight:900;color:var(--text);">$5,299</span>
+            </div>
+            <div style="display:grid;gap:0.45rem;padding:0.85rem 0;border-bottom:1px solid var(--line);font-size:0.92rem;">
+              <div style="display:flex;justify-content:space-between;">
+                <span style="color:var(--muted);">+ 15% NB HST</span>
+                <span id="quote-hst" class="mono">$794.85</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;font-weight:800;">
+                <span>Total w/ 15% HST</span>
+                <span id="quote-total-hst" class="mono">$6,093.85</span>
+              </div>
+            </div>
+            <div style="background:var(--green-bg);border:1px solid var(--green-line);border-radius:10px;padding:0.85rem;margin-top:0.85rem;">
+              <div style="display:flex;justify-content:space-between;align-items:center;">
+                <span style="color:var(--green);font-weight:800;font-size:0.88rem;">30% Pre-Tax Material Deposit</span>
+                <span id="quote-deposit" class="mono" style="font-size:1.25rem;font-weight:900;color:var(--text);">$1,590</span>
+              </div>
+              <div class="mono" style="font-size:0.72rem;color:#d8f5e0;margin-top:0.25rem;">Cash or Interac E-Transfer · Balance due on completion</div>
+            </div>
+          </div>
+
+          <div id="quote-only-block" style="display:none;margin-top:1rem;padding:1rem;border-radius:10px;background:var(--bg);border:1px solid var(--cedar);">
+            <div style="font-size:1.35rem;font-weight:900;color:var(--cedar-light);">Quote on Request</div>
+            <p style="color:var(--muted);font-size:0.88rem;margin-top:0.4rem;">
+              RV Porch Editions are quoted after confirming your lot pad dimensions, setback clearance, and cedar rail layout.
+            </p>
+          </div>
+
+          <div style="margin-top:1.1rem;">
+            <div class="kicker" style="margin-bottom:0.5rem;">Included Structural & Safety Specs</div>
+            <ul id="dynamic-included-list" style="list-style:none;padding:0;margin:0;display:grid;gap:0.45rem;font-size:0.84rem;color:var(--muted);"></ul>
+          </div>
+
+          <div class="btn-row" style="margin-top:1.25rem;">
+            <button type="button" id="lock-slot-btn" class="btn btn-primary" style="width:100%;" onclick="submitBuildQuote()">Lock In 30% Build Slot →</button>
+            <button type="button" class="btn no-print" style="width:100%;" onclick="printSpecSheet()">Print Spec Sheet ⎙</button>
+          </div>
+        </aside>
       </div>
+    </section>
+  </main>
 
-      <a class="btn primary full" id="sendEstimateBtn" href="contact.html">Send This Exact Build to Quote Form →</a>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="grid-3">
+        <div>
+          <img src="assets/logos/placed-shed-a-white.svg" alt="PLaCED Outdoor" style="height:46px;width:auto;">
+          <p style="color:var(--muted);font-size:0.9rem;margin-top:0.85rem;">
+            Custom off-grid camp hubs, golf-cart stations, and panelized sheds built in Quispamsis & Saint John, NB.
+            <strong>Make this place your home.</strong>
+          </p>
+          <p class="mono" style="font-size:0.76rem;color:var(--cedar-light);margin-top:0.5rem;">
+            Cash or Interac E-Transfer Only · All prices + 15% NB HST · 30% pre-tax deposit locks build slot.
+          </p>
+        </div>
+        <div>
+          <div class="kicker">Station & Park Docs</div>
+          <ul style="list-style:none;padding:0;margin:0.75rem 0 0;display:grid;gap:0.45rem;font-size:0.9rem;">
+            <li><a href="full-station.html">18×10 Full Station Architecture</a></li>
+            <li><a href="pamphlet.html">Printable 6-Page Station Pamphlet</a></li>
+            <li><a href="campground-sheet.html">1-Page Cash vs. 36-Mo RTO Matrix</a></li>
+            <li><a href="partner-program.html">Campground Manager ROI Program</a></li>
+            <li><a href="assets/pdf/The-Full-Station-Schematics.pdf" target="_blank" rel="noopener">Download Schematics PDF ↗</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="kicker">Direct Shop Desk</div>
+          <p style="font-size:0.92rem;margin-top:0.75rem;">
+            <strong><a href="mailto:info@placed.life">info@placed.life</a></strong><br>
+            <span style="color:var(--muted);">Quispamsis · Kennebecasis Valley · Saint John · Southern NB</span>
+          </p>
+          <div class="btn-row" style="margin-top:0.9rem;">
+            <a href="estimator.html" class="btn btn-primary">Configure & Price</a>
+            <a href="contact.html" class="btn">Book Walkthrough</a>
+          </div>
+        </div>
+      </div>
+      <div style="border-top:1px solid var(--line);margin-top:2rem;padding-top:1.25rem;display:flex;flex-wrap:wrap;justify-content:space-between;gap:0.75rem;font-size:0.8rem;color:var(--faint);">
+        <span>© 2026 PLaCED Outdoor Sheds · Always Harper.</span>
+        <span class="mono">Electrical circuits & solar tie-ins installed & signed off by licensed NB electrician.</span>
+      </div>
     </div>
-  </div>
-</section>
-
-</main>
-<footer class="footer">
-  <div>
-    <b>PLACED Outdoor</b><br>
-    Quispamsis · Rothesay · Kennebecasis Valley · Greater Saint John<br>
-    <small style="color:var(--muted)">100% Ground-Level Custom Sheds, Baby Barns &amp; Backyard Structures · Cash &amp; E-Transfer Only</small>
-  </div>
-  <div style="text-align:right">
-    <a href="mailto:info@placed.life" style="color:var(--cedar);font-weight:800">info@placed.life</a><br>
-    <small style="color:var(--muted)">30% Deposit Locks Winter Lumber Pricing · Zero Rent-to-Own Markups</small>
-  </div>
-</footer>
-<script src="assets/site.js"></script>
+  </footer>
+  <script src="assets/site.js"></script>
 </body>
 </html>

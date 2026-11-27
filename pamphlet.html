@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Printable 6-Page 18×10 Full Station Pamphlet | PLaCED Outdoor Sheds</title>
+  <meta name="description" content="Interactive and print-ready 6-page brochure for the 18x10 PLaCED Full Station Camp Hub.">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap nav-inner">
+      <a href="index.html" class="brand-mark" aria-label="PLaCED Outdoor Home">
+        <img src="assets/logos/placed-shed-a-white.svg" alt="PLaCED Outdoor — Make this place your home" style="height:44px;width:auto;">
+      </a>
+      <button class="mobile-toggle" type="button" onclick="toggleMobileNav()">Menu ☰</button>
+      <nav id="main-nav" class="nav-links" aria-label="Primary Navigation">
+        <a href="index.html">Home</a>
+        <a href="full-station.html">18×10 Full Station</a>
+        <a href="sheds.html">Sheds & Bunkies</a>
+        <a href="estimator.html">Live Estimator</a>
+        <a href="partner-program.html">Campground B2B</a>
+        <a href="handbook.html">Venture Handbook</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="process.html">1-Day Install</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html" class="nav-cta">Lock Build Slot</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section style="padding:2.5rem 0 1.5rem;" class="no-print">
+      <div class="wrap">
+        <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1rem;">
+          <div>
+            <span class="pill pill-cedar">Print-Ready Brochure</span>
+            <h1 class="h2" style="margin-top:0.5rem;">18×10 Full Station — 6-Page Pamphlet</h1>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:0.5rem;align-items:center;">
+            <span id="pamphlet-counter" class="mono" style="font-size:0.82rem;color:var(--muted);margin-right:0.5rem;">Page 1 of 6</span>
+            <button type="button" id="pamphlet-toggle-all" data-all="0" class="btn" onclick="toggleAllPamphletPages()">Show All 6 Pages</button>
+            <button type="button" class="btn btn-primary" onclick="printSpecSheet()">Print / Save PDF ⎙</button>
+          </div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:1rem;">
+          <button type="button" class="btn btn-primary pamphlet-tab" onclick="setPamphletPage(0)">1. Cover</button>
+          <button type="button" class="btn pamphlet-tab" onclick="setPamphletPage(1)">2. Architecture</button>
+          <button type="button" class="btn pamphlet-tab" onclick="setPamphletPage(2)">3. 5-Rung Ladder</button>
+          <button type="button" class="btn pamphlet-tab" onclick="setPamphletPage(3)">4. Safety & Solar</button>
+          <button type="button" class="btn pamphlet-tab" onclick="setPamphletPage(4)">5. Cash vs. RTO</button>
+          <button type="button" class="btn pamphlet-tab" onclick="setPamphletPage(5)">6. Back Cover</button>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding:1rem 0 3rem;">
+      <div class="wrap">
+        <article class="pamphlet-page pamphlet-dark pamphlet-slide" style="padding:2.25rem;">
+          <div style="display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:1rem;">
+            <img src="assets/logos/placed-shed-a-white.svg" alt="PLaCED Outdoor" style="height:48px;">
+            <span class="pill pill-cedar">18'-0" × 10'-0" EDITION</span>
+          </div>
+          <div class="grid-2" style="margin-top:1.75rem;align-items:center;">
+            <div>
+              <div class="kicker">Off-Grid Golf Cart & Camp Station</div>
+              <h2 class="h1" style="margin-top:0.5rem;">THE FULL STATION.</h2>
+              <p style="color:var(--muted);font-size:1.05rem;margin-top:0.85rem;">
+                A 10'×10' crushed-gravel drive-through cart bay flanked by twin 4'×10' wood-floored wings for R-12 cold battery storage
+                and a 3" roof-vented zero-electrical fuel locker.
+              </p>
+              <div style="margin-top:1.25rem;padding:1rem;border-radius:12px;background:var(--surface);border:1px solid var(--cedar);">
+                <div style="font-size:1.65rem;font-weight:900;">$4,499 – $9,999 CAD <span style="font-size:0.9rem;color:var(--cedar-light);">+ 15% NB HST</span></div>
+                <div class="mono" style="font-size:0.78rem;color:var(--muted);margin-top:0.25rem;">30% Pre-Tax Deposit ($1,350–$3,000) · 1-Day Panelized Install</div>
+              </div>
+            </div>
+            <div>
+              <img src="assets/img/full-station-studio.jpg" alt="18x10 Full Station Render" style="border-radius:12px;border:1px solid var(--line);">
+            </div>
+          </div>
+        </article>
+
+        <article class="pamphlet-page pamphlet-slide" style="display:none;padding:2.25rem;">
+          <div style="display:flex;justify-content:space-between;border-bottom:2px solid #111;padding-bottom:0.75rem;">
+            <strong>PAGE 2 · 18'-0" × 10'-0" SYMMETRICAL ARCHITECTURE</strong>
+            <span class="mono" style="font-size:0.8rem;">180 SQ FT · 7'-0" EAVES · 8'-8" PEAK</span>
+          </div>
+          <div class="grid-2" style="margin-top:1.5rem;align-items:center;">
+            <img src="assets/img/camp-hub-cutaway-diagram.jpg" alt="18x10 Cutaway Diagram" style="border-radius:10px;border:1px solid #ccc;">
+            <div>
+              <h3 style="font-size:1.5rem;font-weight:900;">Three Specialized Zones Under One Black Steel Roof</h3>
+              <ul style="margin-top:0.85rem;display:grid;gap:0.65rem;font-size:0.95rem;">
+                <li><strong>Center Bay (10'×10' · 9'-1" Clear Posts):</strong> Compacted 3/4" gravel base eliminates wood floor rot. 6×6 PT posts, 45° cedar Y-braces, and four 30" earth augers.</li>
+                <li><strong>Left Wing (4'×10' Battery Suite):</strong> 5/8" T&G floor on 4×4 PT skids, R-12 insulated battery box, high H₂ vent, and exterior-mounted 120V GFCI.</li>
+                <li><strong>Right Wing (4'×10' Fuel & Workbench):</strong> Vapor-sealed fuel locker with bottom intake louver, 3" roof vent stack, and zero electrical.</li>
+                <li><strong>Low-Profile Roofline:</strong> 4:12 pitch 29-gauge 3-rib black steel peaks at 8'-8"—over 4 ft below a 13' 5th-wheel roof.</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="pamphlet-page pamphlet-slide" style="display:none;padding:2.25rem;">
+          <div style="display:flex;justify-content:space-between;border-bottom:2px solid #111;padding-bottom:0.75rem;">
+            <strong>PAGE 3 · 5-RUNG LADDER & TURNKEY BUNDLES</strong>
+            <span class="mono" style="font-size:0.8rem;">CASH PRICE + 15% NB HST</span>
+          </div>
+          <div style="margin-top:1.25rem;">
+            <table>
+              <thead>
+                <tr>
+                  <th style="color:#111;border-color:#111;">Model / Bundle</th>
+                  <th style="color:#111;border-color:#111;">Specification</th>
+                  <th style="color:#111;border-color:#111;">Cash (+HST)</th>
+                  <th style="color:#111;border-color:#111;">30% Deposit</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>Rung 1: Open Canopy</strong></td><td>10×10 gravel cart bay + twin 4×10 wings + 4 augers</td><td><strong>$4,499</strong></td><td>$1,350</td></tr>
+                <tr><td><strong>Rung 2: Winter Canvas</strong></td><td>Marine-grade winter bay curtains + storm straps</td><td><strong>$4,799</strong></td><td>$1,440</td></tr>
+                <tr><td><strong>Rung 3: Fitted LP Panels</strong></td><td>Pre-cut black LP SmartSide slot-in bay panels</td><td><strong>$4,999</strong></td><td>$1,500</td></tr>
+                <tr><td><strong>Rung 4: Single 7×7 Roll-Up</strong></td><td>Commercial 7'×7' black steel roll-up door</td><td><strong>$5,299</strong></td><td>$1,590</td></tr>
+                <tr><td><strong>Rung 5: Dual 7×7 Roll-Ups</strong></td><td>Front & rear 7'×7' steel roll-ups (drive-thru)</td><td><strong>$6,299</strong></td><td>$1,890</td></tr>
+                <tr><td><strong>Bundle 1: Pro Wired & Safety</strong></td><td>Rung 4 + Battery & Fuel Lockers + Workbench + 120V LED/GFCI/USB (Save $338)</td><td><strong>$6,899</strong></td><td>$2,070</td></tr>
+                <tr><td><strong>Bundle 2: King of Scenic View</strong></td><td>Pro Wired + 400W Solar/100Ah LFP + Opener + 48V Charger + Security + NOCO (Save $993)</td><td><strong>$9,999</strong></td><td>$3,000</td></tr>
+              </tbody>
+            </table>
+            <p class="mono" style="font-size:0.78rem;margin-top:0.85rem;">3–5 Park Group Batching: -$250 off each unit. Cash or Interac E-Transfer only.</p>
+          </div>
+        </article>
+
+        <article class="pamphlet-page pamphlet-slide" style="display:none;padding:2.25rem;">
+          <div style="display:flex;justify-content:space-between;border-bottom:2px solid #111;padding-bottom:0.75rem;">
+            <strong>PAGE 4 · VENTILATION SAFETY & OFF-GRID SOLAR</strong>
+            <span class="mono" style="font-size:0.8rem;">LICENSED NB ELECTRICIAN SIGN-OFF</span>
+          </div>
+          <div class="grid-2" style="margin-top:1.5rem;align-items:center;">
+            <div>
+              <h3 style="font-size:1.35rem;font-weight:900;">Engineered Separation: Hydrogen Up, Fuel Vapors Down</h3>
+              <p style="margin-top:0.65rem;font-size:0.94rem;">
+                Storing golf-cart batteries beside gasoline cans inside an unvented wooden shed is a preventable hazard.
+                The Full Station separates them across a 10' open-air bay:
+              </p>
+              <ul style="margin-top:0.75rem;display:grid;gap:0.55rem;font-size:0.92rem;">
+                <li><strong>Left Wing Battery Box:</strong> R-12 rigid foam buffers sub-zero nights; high louver exhausts rising H₂ gas; 120V GFCI mounts <em>outside</em> the sealed box on the dry wall.</li>
+                <li><strong>Right Wing Fuel Locker:</strong> Bottom intake louver + 3" roof stack vents heavy fuel vapors; strictly zero electrical circuits or switches inside.</li>
+                <li><strong>400W / 800W Solar Packages:</strong> Roof-mounted monocrystalline panels, MPPT controller, self-heating LiFePO4 battery bank, and 2000W pure-sine inverter.</li>
+              </ul>
+            </div>
+            <img src="assets/img/full-station-winter-cutaway.webp" alt="Winter Cutaway Interior Engineering" style="border-radius:10px;border:1px solid #ccc;">
+          </div>
+        </article>
+
+        <article class="pamphlet-page pamphlet-slide" style="display:none;padding:2.25rem;">
+          <div style="display:flex;justify-content:space-between;border-bottom:2px solid #111;padding-bottom:0.75rem;">
+            <strong>PAGE 5 · CASH ARBITRAGE VS. 36-MONTH DEALER RTO</strong>
+            <span class="mono" style="font-size:0.8rem;">QUISPAMSIS & SAINT JOHN BENCHMARK</span>
+          </div>
+          <div class="grid-2" style="margin-top:1.5rem;">
+            <div style="padding:1.25rem;border:2px solid #dc2626;border-radius:10px;">
+              <div class="mono" style="font-size:0.75rem;color:#b91c1c;font-weight:700;">ROADSIDE DEALER LOT (36-MO RTO)</div>
+              <div style="font-size:2.4rem;font-weight:900;color:#b91c1c;margin:0.35rem 0;">$12,086</div>
+              <p style="font-size:0.9rem;">$335.74/mo × 36 months ($7,252 sale / $9,065 regular tag) for an empty wood box with swing doors that jam on frost heave and zero cart bay.</p>
+            </div>
+            <div style="padding:1.25rem;border:2px solid #15803d;border-radius:10px;background:#f0fdf4;">
+              <div class="mono" style="font-size:0.75rem;color:#15803d;font-weight:700;">PLaCED 18×10 ROLL-UP HUB</div>
+              <div style="font-size:2.4rem;font-weight:900;color:#111;margin:0.35rem 0;">$5,299 <span style="font-size:0.95rem;">+ HST</span></div>
+              <p style="font-size:0.9rem;">Save <strong>$6,787</strong> vs. 36-month RTO—or step up to the turnkey <strong>Pro Wired & Safety Station ($6,899)</strong> and still beat the dealer's $7,252 sale sticker by $353.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="pamphlet-page pamphlet-dark pamphlet-slide" style="display:none;padding:2.5rem;">
+          <div class="kicker">Back Cover · Make This Place Your Home</div>
+          <h2 class="h1" style="margin-top:0.65rem;">Always Harper.</h2>
+          <p style="font-size:1.1rem;color:#e8e0d7;max-width:780px;margin-top:1rem;line-height:1.75;">
+            PLaCED is for <strong>Piper, Luna, Harper, Charlie, Cali, Emma, and Dawn</strong>.
+            They stayed in place until you were ready to launch, until you were ready to be a dad.
+            Harper is the reason—the shed-roof <strong>A</strong> in <strong>PLaCED</strong> is <strong>Always Harper</strong>.
+          </p>
+          <div style="margin-top:2rem;padding-top:1.25rem;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1rem;">
+            <div>
+              <div style="font-weight:900;font-size:1.15rem;">placedsheds.vercel.app · info@placed.life</div>
+              <div class="mono" style="font-size:0.78rem;color:var(--cedar-light);">Quispamsis · Kennebecasis Valley · Saint John · Southern NB</div>
+            </div>
+            <img src="assets/logos/placed-shed-a-white.svg" alt="PLaCED Outdoor" style="height:44px;">
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="grid-3">
+        <div>
+          <img src="assets/logos/placed-shed-a-white.svg" alt="PLaCED Outdoor" style="height:46px;width:auto;">
+          <p style="color:var(--muted);font-size:0.9rem;margin-top:0.85rem;">
+            Custom off-grid camp hubs, golf-cart stations, and panelized sheds built in Quispamsis & Saint John, NB.
+            <strong>Make this place your home.</strong>
+          </p>
+          <p class="mono" style="font-size:0.76rem;color:var(--cedar-light);margin-top:0.5rem;">
+            Cash or Interac E-Transfer Only · All prices + 15% NB HST · 30% pre-tax deposit locks build slot.
+          </p>
+        </div>
+        <div>
+          <div class="kicker">Station & Park Docs</div>
+          <ul style="list-style:none;padding:0;margin:0.75rem 0 0;display:grid;gap:0.45rem;font-size:0.9rem;">
+            <li><a href="full-station.html">18×10 Full Station Architecture</a></li>
+            <li><a href="pamphlet.html">Printable 6-Page Station Pamphlet</a></li>
+            <li><a href="campground-sheet.html">1-Page Cash vs. 36-Mo RTO Matrix</a></li>
+            <li><a href="partner-program.html">Campground Manager ROI Program</a></li>
+            <li><a href="assets/pdf/The-Full-Station-Schematics.pdf" target="_blank" rel="noopener">Download Schematics PDF ↗</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="kicker">Direct Shop Desk</div>
+          <p style="font-size:0.92rem;margin-top:0.75rem;">
+            <strong><a href="mailto:info@placed.life">info@placed.life</a></strong><br>
+            <span style="color:var(--muted);">Quispamsis · Kennebecasis Valley · Saint John · Southern NB</span>
+          </p>
+          <div class="btn-row" style="margin-top:0.9rem;">
+            <a href="estimator.html" class="btn btn-primary">Configure & Price</a>
+            <a href="contact.html" class="btn">Book Walkthrough</a>
+          </div>
+        </div>
+      </div>
+      <div style="border-top:1px solid var(--line);margin-top:2rem;padding-top:1.25rem;display:flex;flex-wrap:wrap;justify-content:space-between;gap:0.75rem;font-size:0.8rem;color:var(--faint);">
+        <span>© 2026 PLaCED Outdoor Sheds · Always Harper.</span>
+        <span class="mono">Electrical circuits & solar tie-ins installed & signed off by licensed NB electrician.</span>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/site.js"></script>
+</body>
+</html>
