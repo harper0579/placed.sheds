@@ -1,121 +1,793 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Venture Handbook (12 Posts) & NB Permit Guide | PLaCED Outdoor Sheds</title>
-  <meta name="description" content="12 field guides covering Southern NB snow loads (1.64-1.90 kPa), Saint John 10 m2 permit rules, battery/fuel safety isolation, and cash vs. RTO math.">
-  <link rel="stylesheet" href="assets/styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The PLaCED Venture Handbook — 12 Full-Length Field Guides | PLaCED Outdoor Sheds</title>
+<meta name="description" content="Twelve field guides from PLaCED Outdoor Sheds: the 18x10 Full Station camp hub, Saint John permit rules, Bay of Fundy snow loads, off-grid solar, and campground rental rows. Quispamsis, Kennebecasis Valley, Saint John and Southern New Brunswick.">
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+[hidden]{display:none!important}
+.hero-figure{margin:1.75rem 0 0;border-radius:16px;overflow:hidden;border:1px solid var(--line)}
+.hero-figure img{width:100%;max-height:440px;object-fit:cover}
+.toc-card{display:flex;flex-direction:column;gap:0.55rem;transition:border-color .15s,transform .15s}
+.toc-card:hover{border-color:var(--cedar);transform:translateY(-2px)}
+.guide-article{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:1.75rem;margin-bottom:1.5rem;scroll-margin-top:88px}
+.guide-article h2{margin:0.45rem 0 0.75rem}
+.guide-article figure{margin:1.1rem 0;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:var(--bg)}
+.guide-article figure img{width:100%;max-height:400px;object-fit:cover}
+.guide-article figcaption{padding:0.65rem 0.9rem;font-size:0.82rem;color:var(--muted);font-family:'IBM Plex Mono',monospace}
+.guide-article p{color:var(--muted);margin:0.85rem 0}
+.guide-article p.lead{color:var(--text)}
+.guide-article ul{color:var(--muted);padding-left:1.25rem;display:grid;gap:0.45rem;margin:0.75rem 0}
+.guide-article h3{margin-top:1.25rem}
+.guide-article .table-wrap{margin:1.1rem 0}
+.guide-article .article-toggle{margin-top:0.75rem}
+.filter-btn{cursor:pointer}
+</style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="wrap nav-inner">
-      <a href="index.html" class="brand-mark" aria-label="PLaCED Outdoor Home">
-        <img src="assets/logos/placed-shed-a-white.svg" alt="PLaCED Outdoor — Make this place your home" style="height:44px;width:auto;">
-      </a>
-      <button class="mobile-toggle" type="button" onclick="toggleMobileNav()">Menu ☰</button>
-      <nav id="main-nav" class="nav-links" aria-label="Primary Navigation">
-        <a href="index.html">Home</a>
-        <a href="full-station.html">18×10 Full Station</a>
-        <a href="sheds.html">Sheds & Bunkies</a>
-        <a href="estimator.html">Live Estimator</a>
-        <a href="partner-program.html">Campground B2B</a>
-        <a href="handbook.html" class="active">Venture Handbook</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="process.html">1-Day Install</a>
-        <a href="faq.html">FAQ</a>
-        <a href="contact.html" class="nav-cta">Lock Build Slot</a>
-      </nav>
-    </div>
-  </header>
+<header class="site-header">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="brand-mark" aria-label="PLaCED Outdoor Home">
+      <img src="assets/logos/placed-shed-a-white.svg" alt="PLaCED Outdoor — Make this place your home" style="height:44px;width:auto;">
+    </a>
+    <button class="mobile-toggle" type="button" onclick="toggleMobileNav()">Menu ☰</button>
+    <nav id="main-nav" class="nav-links" aria-label="Primary Navigation">
+      <a href="index.html">Home</a>
+      <a href="full-station.html">18×10 Full Station</a>
+      <a href="sheds.html">Sheds & Bunkies</a>
+      <a href="estimator.html">Live Estimator</a>
+      <a href="partner-program.html">Campground B2B</a>
+      <a href="handbook.html" class="active">Venture Handbook</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="process.html">1-Day Install</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html" class="nav-cta">Lock Build Slot</a>
+    </nav>
+  </div>
+</header>
 
-  <main>
-    <section style="padding:3.25rem 0 2.5rem;">
-      <div class="wrap">
-        <span class="pill pill-cedar">Unified Knowledge Base · 12 Chapters</span>
-        <h1 class="h1" style="margin-top:0.85rem;">The PLaCED Venture Handbook.</h1>
-        <p class="lead">
-          Field notes on Southern New Brunswick snow loads (1.64–1.90 kPa), Saint John's 10 m² accessory permit rule,
-          licensed electrical & battery ventilation standards, and panelized construction.
-        </p>
-        <div class="grid-3" style="margin-top:1.75rem;">
-          <div class="card" style="padding:0.75rem;">
-            <img src="assets/img/handbook-hero.webp" alt="PLaCED Panelized Timber & Steel Craft" style="aspect-ratio:16/10;">
-            <div class="mono" style="font-size:0.75rem;color:var(--cedar-light);margin-top:0.55rem;">PLATE 01 · 29-GA STEEL & CEDAR FRAMING</div>
-          </div>
-          <div class="card" style="padding:0.75rem;">
-            <img src="assets/img/handbook-dusk-solar.webp" alt="Off-Grid Dusk Solar & LED Lighting" style="aspect-ratio:16/10;">
-            <div class="mono" style="font-size:0.75rem;color:var(--cedar-light);margin-top:0.55rem;">PLATE 02 · 400W OFF-GRID SOLAR & LED SUITE</div>
-          </div>
-          <div class="card" style="padding:0.75rem;">
-            <img src="assets/img/handbook-diagnostics.webp" alt="R-12 Battery & Electrical Diagnostics" style="aspect-ratio:16/10;">
-            <div class="mono" style="font-size:0.75rem;color:var(--cedar-light);margin-top:0.55rem;">PLATE 03 · LICENSED NB ELECTRICAL SIGN-OFF</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="wrap">
-        <div class="grid-2">
-          <article class="card"><div class="kicker">Post 01 · Southern NB Field Notes</div><h3 class="h3" style="margin-top:0.45rem;">Why We Built PLaCED: Cash Arbitrage vs. $12,086 Dealer RTO</h3><p style="color:var(--muted);font-size:0.92rem;margin-top:0.55rem;">Breaking down the 36-month $335.74/mo roadside shed trap in Quispamsis & Saint John and how panelized direct builds save buyers $6,787+.</p></article>
-          <article class="card"><div class="kicker">Post 02 · Southern NB Field Notes</div><h3 class="h3" style="margin-top:0.45rem;">Saint John 10 m² (107.6 sq ft) Accessory Permit Threshold</h3><p style="color:var(--muted);font-size:0.92rem;margin-top:0.55rem;">How 8×10 (80 sq ft) and 8×12 (96 sq ft) sheds stay below the Saint John permit trigger—and when a development permit applies to larger footprints.</p></article>
-          <article class="card"><div class="kicker">Post 03 · Southern NB Field Notes</div><h3 class="h3" style="margin-top:0.45rem;">NB Snow Loads: Designing for 1.64 to 1.90 kPa Ground Snow</h3><p style="color:var(--muted);font-size:0.92rem;margin-top:0.55rem;">Why 29-gauge 3-rib black steel roofing on a 4:12 pitch sheds wet Bay of Fundy snow faster than asphalt shingles.</p></article>
-          <article class="card"><div class="kicker">Post 04 · Southern NB Field Notes</div><h3 class="h3" style="margin-top:0.45rem;">Gravel Pad vs. Wood Subfloor Under Golf Carts</h3><p style="color:var(--muted);font-size:0.92rem;margin-top:0.55rem;">Why our 18×10 Full Station leaves the center 10×10 bay open over 3/4" crushed stone while keeping twin 4×10 wings on 5/8" T&G over 4×4 PT skids.</p></article>
-          <article class="card"><div class="kicker">Post 05 · Southern NB Field Notes</div><h3 class="h3" style="margin-top:0.45rem;">Working with Vetted Local Trade Partners & Licensed Electricians</h3><p style="color:var(--muted);font-size:0.92rem;margin-top:0.55rem;">How PLaCED pairs shop panelization with vetted local trade partners and licensed NB electricians ($400/hub allowance) for code-compliant GFCI and solar tie-ins.</p></article>
-          <article class="card"><div class="kicker">Post 06 · Southern NB Field Notes</div><h3 class="h3" style="margin-top:0.45rem;">Opposite-Wing Safety: Hydrogen Up, Hydrocarbon Vapors Down</h3><p style="color:var(--muted);font-size:0.92rem;margin-top:0.55rem;">Engineering R-12 battery enclosures with high H₂ vents and exterior 120V GFCIs opposite a 3" roof-vented, zero-electrical fuel locker.</p></article>
-          <article class="card"><div class="kicker">Post 07 · Southern NB Field Notes</div><h3 class="h3" style="margin-top:0.45rem;">7×7 Commercial Steel Roll-Up Doors vs. Winter Frost Heave</h3><p style="color:var(--muted);font-size:0.92rem;margin-top:0.55rem;">Why outswing wooden shed doors bind every February in Southern NB—and how coil-drum steel roll-ups eliminate seasonal shimming.</p></article>
-          <article class="card"><div class="kicker">Post 08 · Southern NB Field Notes</div><h3 class="h3" style="margin-top:0.45rem;">Off-Grid 400W Solar & Self-Heating LiFePO4 Batteries in Winter</h3><p style="color:var(--muted);font-size:0.92rem;margin-top:0.55rem;">Sizing monocrystalline roof arrays, MPPT controllers, and low-temp BMS cutoff protection for seasonal camps.</p></article>
-          <article class="card"><div class="kicker">Post 09 · Southern NB Field Notes</div><h3 class="h3" style="margin-top:0.45rem;">30% Material-Lock Deposits & Simple Milestone Billing</h3><p style="color:var(--muted);font-size:0.92rem;margin-top:0.55rem;">How locking lumber and steel upon a 30% pre-tax deposit protects customers from mid-season price swings with clear milestone billing.</p></article>
-          <article class="card"><div class="kicker">Post 10 · Southern NB Field Notes</div><h3 class="h3" style="margin-top:0.45rem;">3–5 Unit Campground Group Batching (-$250 Per Station)</h3><p style="color:var(--muted);font-size:0.92rem;margin-top:0.55rem;">Coordinating single-week deliveries across neighboring seasonal lots to cut mobilization overhead and pass $250/unit back to campers.</p></article>
-          <article class="card"><div class="kicker">Post 11 · Southern NB Field Notes</div><h3 class="h3" style="margin-top:0.45rem;">Campground B2B: Split-Zone Rental Rows (36.2 to 42.9-Mo Payback)</h3><p style="color:var(--muted);font-size:0.92rem;margin-top:0.55rem;">Why renting cart stalls ($85/mo) separately from twin utility lockers ($35/mo each) triples ancillary yield for park operators.</p></article>
-          <article class="card"><div class="kicker">Post 12 · Southern NB Field Notes</div><h3 class="h3" style="margin-top:0.45rem;">1-Day Panelized Assembly: Zero Boom-Truck Turf Damage</h3><p style="color:var(--muted);font-size:0.92rem;margin-top:0.55rem;">Pre-building wall panels, trusses, and cedar Y-braces in our shop so heavy trucks never rut saturated spring lawns or campground pads.</p></article>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
+<main>
+  <!-- HERO -->
+  <section class="section hero">
     <div class="wrap">
-      <div class="grid-3">
-        <div>
-          <img src="assets/logos/placed-shed-a-white.svg" alt="PLaCED Outdoor" style="height:46px;width:auto;">
-          <p style="color:var(--muted);font-size:0.9rem;margin-top:0.85rem;">
-            Custom off-grid camp hubs, golf-cart stations, and panelized sheds built in Quispamsis & Saint John, NB.
-            <strong>Make this place your home.</strong>
-          </p>
-          <p class="mono" style="font-size:0.76rem;color:var(--cedar-light);margin-top:0.5rem;">
-            All major payment methods accepted · All prices + 15% NB HST · 30% pre-tax deposit locks your build week.
-          </p>
-        </div>
-        <div>
-          <div class="kicker">Station & Park Docs</div>
-          <ul style="list-style:none;padding:0;margin:0.75rem 0 0;display:grid;gap:0.45rem;font-size:0.9rem;">
-            <li><a href="full-station.html">18×10 Full Station Architecture</a></li>
-            <li><a href="pamphlet.html">Printable 6-Page Station Pamphlet</a></li>
-            <li><a href="campground-sheet.html">1-Page Cash vs. 36-Mo RTO Matrix</a></li>
-            <li><a href="partner-program.html">Campground Manager ROI Program</a></li>
-            <li><a href="assets/pdf/The-Full-Station-Schematics.pdf" target="_blank" rel="noopener">Download Schematics PDF ↗</a></li>
-          </ul>
-        </div>
-        <div>
-          <div class="kicker">Direct Shop Desk</div>
-          <p style="font-size:0.92rem;margin-top:0.75rem;color:var(--muted);">
-            Quispamsis · Kennebecasis Valley · Saint John · Southern NB
-          </p>
-          <div class="btn-row" style="margin-top:0.9rem;">
-            <a href="tel:+15066502122" class="btn btn-primary">Call Shop Desk</a>
-            <a href="mailto:placed.sj@gmail.com" class="btn">Email Shop Desk</a>
-            <a href="estimator.html" class="btn">Configure & Price</a>
-          </div>
-        </div>
+      <p class="kicker">PLaCED Outdoor Sheds &middot; Quispamsis &middot; Kennebecasis Valley &middot; Saint John &middot; Southern New Brunswick</p>
+      <h1 class="h1">The PLaCED Venture Handbook</h1>
+      <p class="lead">Make this place your home.</p>
+      <p class="lead">Twelve full-length field guides on the 18&times;10 Full Station camp hub, Saint John permit rules, Bay of Fundy snow loads, off-grid solar, and campground rental rows &mdash; written for the people who will actually use the buildings, and the park owners who will host them.</p>
+      <div class="btn-row">
+        <a href="#guide-index" class="btn btn-primary">Browse the 12 Guides</a>
+        <a href="full-station.html" class="btn">See the Full Station</a>
+        <a href="contact.html" class="btn">Lock Build Slot</a>
       </div>
-      <div style="border-top:1px solid var(--line);margin-top:2rem;padding-top:1.25rem;display:flex;flex-wrap:wrap;justify-content:space-between;gap:0.75rem;font-size:0.8rem;color:var(--faint);">
-        <span>© 2026 PLaCED Outdoor Sheds · Quispamsis & Saint John, NB.</span>
-        <span class="mono">Electrical circuits & solar tie-ins installed & signed off by licensed NB electrician.</span>
+      <p>
+        <span class="pill pill-cedar">12 guides</span>
+        <span class="pill">18&times;10 Full Station</span>
+        <span class="pill">Saint John &middot; Quispamsis</span>
+        <span class="pill pill-green">All major payment methods accepted</span>
+      </p>
+      <figure class="hero-figure">
+        <img src="assets/img/handbook-hero.webp" alt="PLaCED engineered outbuilding in a Southern New Brunswick campground setting" loading="eager">
+      </figure>
+    </div>
+  </section>
+
+  <!-- READER BAR: FILTER + EXPAND -->
+  <section class="section reader-bar">
+    <div class="wrap">
+      <div class="btn-row filter-row" role="group" aria-label="Filter guides by topic">
+        <button type="button" class="pill pill-cedar filter-btn is-active" data-filter="all">All 12 Guides</button>
+        <button type="button" class="pill filter-btn" data-filter="camp-hub">18&times;10 Camp Hub &amp; Solar</button>
+        <button type="button" class="pill filter-btn" data-filter="permits">NB Permits &amp; Snow Loads</button>
+        <button type="button" class="pill filter-btn" data-filter="pricing">Pricing &amp; Park ROI</button>
+      </div>
+      <div class="btn-row">
+        <button type="button" class="btn" id="expand-all">Expand all guides</button>
+        <button type="button" class="btn" id="collapse-all">Collapse all guides</button>
+        <span class="mono" id="guide-count">Showing 12 of 12 guides</span>
       </div>
     </div>
-  </footer>
-  <script src="assets/site.js"></script>
+  </section>
+
+  <!-- TABLE OF CONTENTS -->
+  <section class="section" id="guide-index">
+    <div class="wrap">
+      <p class="kicker">Guide Index</p>
+      <h2 class="h2">Twelve guides. One property system.</h2>
+      <p class="lead">Pick a guide to jump straight to it. Every guide opens in full on this page &mdash; no sign-up, no download.</p>
+      <div class="grid-3" id="toc-grid">
+        <a href="#post-01" class="card toc-card" data-category="pricing">
+          <span class="mono">01</span>
+          <span class="pill">Pricing &amp; Park ROI</span>
+          <h3 class="h3">Dealer Lot Arbitrage: Why Paying $12,086 for an Empty 10&times;16 Box Makes Zero Sense in Southern NB</h3>
+          <span class="mono reading-time" data-reading-for="post-01"></span>
+        </a>
+        <a href="#post-02" class="card toc-card" data-category="permits">
+          <span class="mono">02</span>
+          <span class="pill">NB Permits &amp; Snow Loads</span>
+          <h3 class="h3">Saint John&rsquo;s 10 m&sup2; (107.6 sq ft) Accessory Permit Rule Explained: 8&times;10 &amp; 8&times;12 vs. Larger Builds</h3>
+          <span class="mono reading-time" data-reading-for="post-02"></span>
+        </a>
+        <a href="#post-03" class="card toc-card" data-category="permits">
+          <span class="mono">03</span>
+          <span class="pill">NB Permits &amp; Snow Loads</span>
+          <h3 class="h3">Engineering for 1.64 to 1.90 kPa Bay of Fundy Snow Loads: 29-Gauge 3-Rib Steel on a 4:12 Pitch</h3>
+          <span class="mono reading-time" data-reading-for="post-03"></span>
+        </a>
+        <a href="#post-04" class="card toc-card" data-category="camp-hub">
+          <span class="mono">04</span>
+          <span class="pill">18&times;10 Camp Hub &amp; Solar</span>
+          <h3 class="h3">Gravel Bay vs. Wood Subfloor: Preventing Floor Rot Under Wet Golf Carts</h3>
+          <span class="mono reading-time" data-reading-for="post-04"></span>
+        </a>
+        <a href="#post-05" class="card toc-card" data-category="camp-hub">
+          <span class="mono">05</span>
+          <span class="pill">18&times;10 Camp Hub &amp; Solar</span>
+          <h3 class="h3">How PLaCED Coordinates Vetted Local Trade Partners &amp; Licensed NB Electricians ($400/Hub Standard)</h3>
+          <span class="mono reading-time" data-reading-for="post-05"></span>
+        </a>
+        <a href="#post-06" class="card toc-card" data-category="camp-hub">
+          <span class="mono">06</span>
+          <span class="pill">18&times;10 Camp Hub &amp; Solar</span>
+          <h3 class="h3">Opposite-Wing Ventilation Safety: Rising Hydrogen (H&#8322;) vs. Heavy Fuel Vapors &amp; Exterior 120V GFCI Placement</h3>
+          <span class="mono reading-time" data-reading-for="post-06"></span>
+        </a>
+        <a href="#post-07" class="card toc-card" data-category="camp-hub">
+          <span class="mono">07</span>
+          <span class="pill">18&times;10 Camp Hub &amp; Solar</span>
+          <h3 class="h3">7&times;7 Commercial Steel Roll-Up Doors vs. Wooden Swing Doors in February Frost Heave</h3>
+          <span class="mono reading-time" data-reading-for="post-07"></span>
+        </a>
+        <a href="#post-08" class="card toc-card" data-category="camp-hub">
+          <span class="mono">08</span>
+          <span class="pill">18&times;10 Camp Hub &amp; Solar</span>
+          <h3 class="h3">Off-Grid 400W Roof Solar &amp; Self-Heating 100Ah LiFePO4 Batteries for Seasonal Camps</h3>
+          <span class="mono reading-time" data-reading-for="post-08"></span>
+        </a>
+        <a href="#post-09" class="card toc-card" data-category="pricing">
+          <span class="mono">09</span>
+          <span class="pill">Pricing &amp; Park ROI</span>
+          <h3 class="h3">How the 30% Pre-Tax Material Deposit &amp; Milestone Billing Protects Your Build Price</h3>
+          <span class="mono reading-time" data-reading-for="post-09"></span>
+        </a>
+        <a href="#post-10" class="card toc-card" data-category="pricing">
+          <span class="mono">10</span>
+          <span class="pill">Pricing &amp; Park ROI</span>
+          <h3 class="h3">Campground Group Batching: How 3 to 5 Neighbors Save $250 Each on a Single Drop Week</h3>
+          <span class="mono reading-time" data-reading-for="post-10"></span>
+        </a>
+        <a href="#post-11" class="card toc-card" data-category="pricing">
+          <span class="mono">11</span>
+          <span class="pill">Pricing &amp; Park ROI</span>
+          <h3 class="h3">Campground Owner Playbook: Split-Zone 4-Bay Rental Rows (36.2 to 42.9-Month Gross Payback)</h3>
+          <span class="mono reading-time" data-reading-for="post-11"></span>
+        </a>
+        <a href="#post-12" class="card toc-card" data-category="camp-hub">
+          <span class="mono">12</span>
+          <span class="pill">18&times;10 Camp Hub &amp; Solar</span>
+          <h3 class="h3">1-Day Panelized Assembly: Zero Heavy Boom-Truck Damage to Lawns &amp; Park Water Lines</h3>
+          <span class="mono reading-time" data-reading-for="post-12"></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK REFERENCE -->
+  <section class="section" id="quick-reference">
+    <div class="wrap">
+      <p class="kicker">Quick Reference</p>
+      <h2 class="h2">The numbers at a glance</h2>
+      <p class="lead">Every price below is a cash price. Add 15% NB HST. The 30% material deposit is calculated on the pre-tax cash price, and the balance plus HST is due on completion. All major payment methods are accepted: credit, debit, Interac e-transfer, and cash.</p>
+      <div class="grid-2">
+        <div class="card">
+          <h3 class="h3">18&times;10 Full Station &mdash; 5 rungs + 2 bundles</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Rung / Bundle</th><th>Cash</th><th>30% Deposit</th></tr></thead>
+              <tbody>
+                <tr><td>Rung 1 &mdash; Open Canopy</td><td>$4,499</td><td>$1,350</td></tr>
+                <tr><td>Rung 2 &mdash; Winter Canvas Closure</td><td>$4,799</td><td>$1,440</td></tr>
+                <tr><td>Rung 3 &mdash; Fitted LP Wood Panels</td><td>$4,999</td><td>$1,500</td></tr>
+                <tr><td>Rung 4 &mdash; Single 7&times;7 Steel Roll-Up (Flagship)</td><td>$5,299</td><td>$1,590</td></tr>
+                <tr><td>Rung 5 &mdash; Dual 7&times;7 Drive-Thru Roll-Ups</td><td>$6,299</td><td>$1,890</td></tr>
+                <tr><td>Bundle 1 &mdash; Pro Wired &amp; Safety</td><td>$6,899</td><td>$2,070</td></tr>
+                <tr><td>Bundle 2 &mdash; King of Scenic View Solar</td><td>$9,999</td><td>$3,000</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Pro Wired saves $338 vs. $7,237 &agrave;-la-carte. King of Scenic View saves $993 vs. Pro Wired plus add-ons. Group batching: 3 to 5 park units on a single drop week saves $250 per unit.</p>
+        </div>
+        <div class="card">
+          <h3 class="h3">Standard sheds &mdash; cash prices</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Model</th><th>Cash</th><th>30% Deposit</th></tr></thead>
+              <tbody>
+                <tr><td>8&times;10 Utility / Baby Barn</td><td>$3,999</td><td>$1,200</td></tr>
+                <tr><td>8&times;12 Camp / Gable Storage Barn</td><td>$4,199</td><td>$1,260</td></tr>
+                <tr><td>10&times;12 Heavy Workshop</td><td>$4,950</td><td>$1,485</td></tr>
+                <tr><td>12&times;16 Bunkie / Heavy Workshop</td><td>$6,499</td><td>$1,950</td></tr>
+                <tr><td>12&times;20 Lofted Barn</td><td>$9,499</td><td>$2,850</td></tr>
+                <tr><td>8&times;12 &amp; 10&times;16 RV Porch Editions</td><td colspan="2">Quote on Request</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>8&times;10 (80 sq ft) and 8&times;12 (96 sq ft) sit under Saint John&rsquo;s 10 m&sup2; (107.6 sq ft) accessory permit exemption threshold. Larger builds need a permit &mdash; see Guide 02.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= GUIDES ======================= -->
+  <section class="section" id="guides">
+    <div class="wrap">
+
+      <!-- POST 01 -->
+      <article class="guide-article" id="post-01" data-category="pricing">
+        <p class="kicker">Guide 01 &middot; Pricing &amp; Park ROI</p>
+        <h2 class="h2">Dealer Lot Arbitrage: Why Paying $12,086 for an Empty 10&times;16 Box Makes Zero Sense in Southern NB</h2>
+        <p><span class="pill">Pricing &amp; Park ROI</span> <span class="mono reading-time" data-reading-for="post-01"></span></p>
+        <figure>
+          <img src="assets/img/full-station-studio.jpg" alt="PLaCED 18 by 10 Full Station camp hub with cart bay in the middle and storage wings on both sides" loading="lazy">
+          <figcaption>The 18&times;10 Full Station: drive-through cart bay in the middle, finished wings on both sides.</figcaption>
+        </figure>
+        <p class="lead">The roadside lot looks cheap until you read the total. A plain 10&times;16 wood box on a Quispamsis lot carries a $7,252 sale tag and a $9,065 regular tag &mdash; or $335.74 a month for 36 months, which comes to $12,086 all in. That is the price of an empty, unpowered box with swing doors.</p>
+        <p>The monthly number is the whole trick. $335.74 a month sounds like a utility bill. It is not. Over three years it buys a depreciating wooden box for nearly double its cash value, and at the end of the term the buyer owns a shed that still has no power, no lockers, no workbench, and doors that jam on frost-heaved ground every February. The lot&rsquo;s margin is not in the lumber. It is in the months.</p>
+        <p>Put the same money against a finished station and the gap is the story. The 18&times;10 Full Station flagship &mdash; a single 7&times;7 steel roll-up, drive-through cart bay, insulated battery locker on the left, sealed gas locker on the right, and a workbench wall &mdash; is $5,299 cash. That is $1,953 less than the dealer&rsquo;s sale tag for the empty box, $3,766 less than the regular tag, and $6,787 less than the rent-to-own total. The cheaper option is also the one with two finished wings, separated fuel and battery storage, and a roof that carries solar.</p>
+        <div class="article-more" hidden>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th></th><th>Dealer lot 10&times;16 box</th><th>PLaCED 18&times;10 Full Station</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Cash price</strong></td><td>$7,252 sale / $9,065 regular</td><td>$5,299 flagship</td></tr>
+                <tr><td><strong>36-month total</strong></td><td>$12,086 ($335.74/mo)</td><td>$5,299 + 15% NB HST</td></tr>
+                <tr><td><strong>Cart bay</strong></td><td>Wood floor, swing doors</td><td>Gravel bay, steel roll-up, drive-through</td></tr>
+                <tr><td><strong>Storage wings</strong></td><td>None</td><td>Battery locker left, gas locker right</td></tr>
+                <tr><td><strong>Power</strong></td><td>None</td><td>Off-grid solar option, EV charger ready</td></tr>
+                <tr><td><strong>Workbench</strong></td><td>None</td><td>Bench, pegboard, shelving as one package</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 class="h3">What to ask any dealer before you sign</h3>
+          <ul>
+            <li>What is the total paid over the full term &mdash; not the monthly number?</li>
+            <li>Is the floor wood or gravel under the cart, and what happens when it stays wet?</li>
+            <li>Are the doors steel roll-up or wooden swing, and do they clear frost heave?</li>
+            <li>Is delivery included, and how far? Is the pad included or extra?</li>
+            <li>Does the building need a permit at your lot, and who handles it?</li>
+          </ul>
+          <p>None of this is an argument against buying a shed on a lot. It is an argument against buying one without reading the total. A lot box has its place: a homeowner who needs storage this week and cannot wait for a build slot will take the lot box every time. But a seasonal camper ordering before the season opens has time &mdash; and with time, the finished station wins on price, on storage, and on what the building actually does.</p>
+          <p>Arbitrage is just a fancy word for buying the same square footage where it costs less. In Southern NB right now, the gap between a dealer&rsquo;s monthly number and a finished station&rsquo;s cash price is the whole business &mdash; thousands of dollars, sitting in plain sight on the lot&rsquo;s own tag.</p>
+        </div>
+        <button type="button" class="btn article-toggle" data-target="post-01" aria-expanded="false">Read the full guide</button>
+      </article>
+
+      <!-- POST 02 -->
+      <article class="guide-article" id="post-02" data-category="permits">
+        <p class="kicker">Guide 02 &middot; NB Permits &amp; Snow Loads</p>
+        <h2 class="h2">Saint John&rsquo;s 10 m&sup2; (107.6 sq ft) Accessory Permit Rule Explained: 8&times;10 &amp; 8&times;12 vs. Larger Builds</h2>
+        <p><span class="pill">NB Permits &amp; Snow Loads</span> <span class="mono reading-time" data-reading-for="post-02"></span></p>
+        <figure>
+          <img src="assets/img/handbook-hero.webp" alt="PLaCED engineered outbuilding on a gravel pad in a Southern New Brunswick yard" loading="lazy">
+          <figcaption>An 8&times;10 at 80 sq ft and an 8&times;12 at 96 sq ft both sit under the permit threshold.</figcaption>
+        </figure>
+        <p class="lead">In the City of Saint John, an accessory building with a gross floor area of 10 square metres (107.6 sq ft) or less needs no building permit. That one line decides the paperwork for most backyard sheds &mdash; and it is the reason the two smallest PLaCED sizes exist in the first place.</p>
+        <p>The arithmetic is short. An 8&times;10 is 80 sq ft. An 8&times;12 is 96 sq ft. Both sit under the 107.6 sq ft line, so both install without a permit application, a fee, or a wait. A 10&times;12 is 120 sq ft &mdash; over the line &mdash; and needs a permit. The 18&times;10 Full Station is 180 sq ft, so it needs a permit in Saint John too. Size the building to the rule, or plan the paperwork into the schedule. Do not assume a big building is exempt.</p>
+        <p>Over the threshold, the city asks for a signed application form, the permit fee plus a refundable deposit, and a site plan showing lot size, the location and dimensions of the proposed and existing accessory buildings, setbacks, easements, and the driveway. Typical shed drawings or structural details go with it. A second storey or loft needs an exiting floor plan and truss plans, and a bathroom needs a water and sewage permit. Metal accessory buildings need drawings stamped by a Professional Engineer licensed in New Brunswick, plus engineer documentation on completion. Heritage Conservation Areas and Flood Risk Areas carry their own rules &mdash; contact the Heritage Officer before applying, and expect a flood analysis where one applies.</p>
+        <div class="article-more" hidden>
+          <p>Quispamsis runs its own process. Applications go through the town&rsquo;s online portal, and accessory buildings there must not exceed 6 m in height above mean grade. A detached garage must sit behind the front line of the dwelling and at least 3 m from the dwelling. The town&rsquo;s application asks for the address, PID, property description, contractor and applicant contact, an owner consent letter, property measurements, easement approvals, septic approval where the lot is not on municipal sewer, and a site plan. The rules are different from Saint John&rsquo;s, so a build that is permit-exempt on one side of the river may not be on the other.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Model</th><th>Footprint</th><th>Saint John permit?</th></tr></thead>
+              <tbody>
+                <tr><td>8&times;10 Utility / Baby Barn</td><td>80 sq ft</td><td><strong>Exempt</strong> &mdash; under 107.6 sq ft</td></tr>
+                <tr><td>8&times;12 Camp / Storage Barn</td><td>96 sq ft</td><td><strong>Exempt</strong> &mdash; under 107.6 sq ft</td></tr>
+                <tr><td>10&times;12 Heavy Workshop</td><td>120 sq ft</td><td>Permit required</td></tr>
+                <tr><td>12&times;16 Bunkie</td><td>192 sq ft</td><td>Permit required</td></tr>
+                <tr><td>18&times;10 Full Station</td><td>180 sq ft</td><td>Permit required</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 class="h3">Before you order any build over the threshold</h3>
+          <ul>
+            <li>Measure the lot and confirm setbacks for your zone &mdash; do not guess them.</li>
+            <li>Check whether the lot sits in a Heritage Conservation Area or a Flood Risk Area.</li>
+            <li>Confirm who prepares the site plan and the structural drawings.</li>
+            <li>Ask the city&rsquo;s One Stop Development Shop to confirm the fee and deposit for your estimate.</li>
+            <li>Build the permit wait into the schedule &mdash; it is part of the build, not an afterthought.</li>
+          </ul>
+          <p>This guide is general information from the city and town sources, not legal advice. Confirm your lot with the City of Saint John One Stop Development Shop or Quispamsis Planning and Development Services before ordering, and keep the confirmation with the build file.</p>
+        </div>
+        <button type="button" class="btn article-toggle" data-target="post-02" aria-expanded="false">Read the full guide</button>
+      </article>
+
+      <!-- POST 03 -->
+      <article class="guide-article" id="post-03" data-category="permits">
+        <p class="kicker">Guide 03 &middot; NB Permits &amp; Snow Loads</p>
+        <h2 class="h2">Engineering for 1.64 to 1.90 kPa Bay of Fundy Snow Loads: 29-Gauge 3-Rib Steel on a 4:12 Pitch</h2>
+        <p><span class="pill">NB Permits &amp; Snow Loads</span> <span class="mono reading-time" data-reading-for="post-03"></span></p>
+        <figure>
+          <img src="assets/img/camp-hub-winter-closed.webp" alt="PLaCED camp hub sealed for winter with a steel roll-up door closed and snow on the roof" loading="lazy">
+          <figcaption>Closed up for winter: steel roof, steel door, and a pitch that sheds snow instead of holding it.</figcaption>
+        </figure>
+        <p class="lead">Southern New Brunswick roofs carry real snow. Reported ground snow loads for the Saint John area run about 1.64 to 1.90 kPa &mdash; wet, heavy snow, often with rain on top of it. A shed roof here is not a decoration. It is a structural decision, and it is the first thing to get right.</p>
+        <p>A kilopascal is a measure of pressure, and in roofing terms it is weight per square metre. At 1.64 to 1.90 kPa, a square metre of roof can be asked to hold roughly 167 to 194 kilograms of snow &mdash; and Fundy snow is the wet kind that packs dense instead of blowing off. Rain-on-snow events add water weight to a snowpack that is already there. A roof that holds that load flat, or a roof covering that traps it, is a roof that will fail in the season it was built for.</p>
+        <p>The Full Station answers with pitch and steel. A 4:12 gable pitch is steep enough that wet snow slides instead of sitting, and a continuous 29-gauge 3-rib steel roof gives it a smooth surface to slide on. Steel does not curl, does not blow off in a Fundy gale, and does not hold the ice dams that form where shingles meet a cold eave. The side walls stand 7'-0" at the eaves with an 8'-8" ridge peak, so the roofline stays more than 4 feet below a 13-foot fifth-wheel roof &mdash; low enough to sit cleanly on a campground lot, high enough to clear a cart with room to spare.</p>
+        <div class="article-more" hidden>
+          <p>Pitch alone is not the whole answer. The roof needs its fasteners, its ridge, and its eaves detailed for the same weather: color-matched screws with neoprene gaskets, a ridge cap that seals the peak, and eaves that let meltwater leave instead of backing up under the sheets. A steel roof that is pitched right and fastened wrong will still leak at the ridge in the first driving rain. That is why the roof goes on in the shop, on jigs, where the fastening pattern is the same on every panel &mdash; not in a field, in the wind, by eye.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Roof choice</th><th>Winter behaviour</th><th>What fails first</th></tr></thead>
+              <tbody>
+                <tr><td><strong>29-gauge 3-rib steel, 4:12 pitch</strong></td><td>Sheds wet snow, no ice dams</td><td>Nothing in a normal season &mdash; check fasteners each spring</td></tr>
+                <tr><td>Asphalt shingles, shallow pitch</td><td>Holds snow, dams at the eave</td><td>Shingle curl, blow-off, eave leaks</td></tr>
+                <tr><td>Flat or near-flat roof</td><td>Holds the full snow load</td><td>Deflection, ponding, seam failure</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 class="h3">What to check on any shed roof before you buy</h3>
+          <ul>
+            <li>Pitch: 4:12 or steeper sheds Fundy snow. Shallower holds it.</li>
+            <li>Material: steel sheds snow and never curls. Shingles are a maintenance item.</li>
+            <li>Fastening: gasketed screws on a set pattern, not nails or staples.</li>
+            <li>Ridge and eaves: capped peak, clean water exit, no place for meltwater to sit.</li>
+            <li>Height: eave and peak numbers in writing, so the unit fits the lot and the sightlines.</li>
+          </ul>
+          <p>Snow load is not a marketing number. It is the load the roof will actually see, in the winters the building will actually stand through. Build for the top of the range, and the roof stops being something to worry about.</p>
+        </div>
+        <button type="button" class="btn article-toggle" data-target="post-03" aria-expanded="false">Read the full guide</button>
+      </article>
+
+      <!-- POST 04 -->
+      <article class="guide-article" id="post-04" data-category="camp-hub">
+        <p class="kicker">Guide 04 &middot; 18&times;10 Camp Hub &amp; Solar</p>
+        <h2 class="h2">Gravel Bay vs. Wood Subfloor: Preventing Floor Rot Under Wet Golf Carts</h2>
+        <p><span class="pill">18&times;10 Camp Hub &amp; Solar</span> <span class="mono reading-time" data-reading-for="post-04"></span></p>
+        <figure>
+          <img src="assets/img/camp-hub-cutaway-diagram.jpg" alt="Cutaway diagram of the Full Station showing the gravel cart bay between the two storage wings" loading="lazy">
+          <figcaption>Cutaway view: gravel under the cart, wood floors only in the dry wings.</figcaption>
+        </figure>
+        <p class="lead">A golf cart does not park like a box of Christmas decorations. It comes in wet, dripping, muddy, and warm from running &mdash; and it parks on the same spot, in the same building, all season. The floor under a cart takes abuse no storage shed floor ever sees, and the floor is where cheap cart shelters die first.</p>
+        <p>Wood under a wet cart rots from the top down. Tires carry water, mud, and road salt into the bay, and the undercarriage drips long after the rain stops. A wood subfloor holds that moisture against its own surface, stains, softens, and eventually gives under the cart&rsquo;s weight &mdash; right where the wheels sit, which is exactly where it is hardest to repair. Hot exhaust on a damp wood floor adds its own damage over a season. The floor looks fine in May and is a repair job by October.</p>
+        <p>The Full Station puts no wood under the cart at all. The center bay sits on compacted 3/4-inch crushed stone gravel: it drains, it dries, it never rots, and it never stains. Water goes down through the stone instead of sitting on a surface. The gravel also takes the weight without complaint &mdash; four cart tires on stone is a non-event &mdash; and if the bay ever ruts, it is fixed with a rake and a wheelbarrow of stone, not a floor replacement.</p>
+        <div class="article-more" hidden>
+          <p>The wings are a different story, because they stay dry. Both 4&times;10 wings sit on 5/8-inch tongue-and-groove wood subfloors over 4&times;4 pressure-treated skids &mdash; the battery locker on the left, the workbench and gas locker on the right. Those floors carry totes, tools, and boots, not wet tires, so wood is the right material there: warm underfoot, easy to sweep, and easy to fasten shelving and bench legs to. The rule is simple and it is the whole design: gravel where it gets wet, wood where it stays dry.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th></th><th>Gravel bay (cart zone)</th><th>Wood floor (wing zones)</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Build</strong></td><td>Compacted 3/4" crushed stone, no subfloor</td><td>5/8" T&amp;G on 4&times;4 PT skids</td></tr>
+                <tr><td><strong>Water</strong></td><td>Drains through, never pools</td><td>Stays dry &mdash; no tires, no drips</td></tr>
+                <tr><td><strong>Rot risk</strong></td><td>None &mdash; no wood to rot</td><td>Low &mdash; dry zone, treated skids</td></tr>
+                <tr><td><strong>Repair</strong></td><td>Rake and top up stone</td><td>Replace a board, not a floor</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 class="h3">Keeping the bay right, season after season</h3>
+          <ul>
+            <li>Re-grade the gravel each spring and top up stone where the tires have tracked it thin.</li>
+            <li>Keep the bay clear of leaves and debris so water keeps draining instead of damming.</li>
+            <li>Check that the pad still crowns slightly to the door so meltwater runs out, not in.</li>
+            <li>Sweep the wing floors and check the skid ends for standing water after heavy rain.</li>
+          </ul>
+          <p>A floor is not a place to save money. It is the part of the building the cart touches every single day, and the part that decides whether the station is still solid in year five or a repair bill in year two.</p>
+        </div>
+        <button type="button" class="btn article-toggle" data-target="post-04" aria-expanded="false">Read the full guide</button>
+      </article>
+
+      <!-- POST 05 -->
+      <article class="guide-article" id="post-05" data-category="camp-hub">
+        <p class="kicker">Guide 05 &middot; 18&times;10 Camp Hub &amp; Solar</p>
+        <h2 class="h2">How PLaCED Coordinates Vetted Local Trade Partners &amp; Licensed NB Electricians ($400/Hub Standard)</h2>
+        <p><span class="pill">18&times;10 Camp Hub &amp; Solar</span> <span class="mono reading-time" data-reading-for="post-05"></span></p>
+        <figure>
+          <img src="assets/img/handbook-diagnostics.webp" alt="Exterior inspection of a PLaCED outbuilding by a trade partner" loading="lazy">
+          <figcaption>One crew builds the timber and steel. Licensed electricians do the circuits.</figcaption>
+        </figure>
+        <p class="lead">A camp hub is two jobs in one building: a timber and steel structure, and an electrical system. PLaCED builds the first and coordinates the second. The crew frames, roofs, and fits the lockers. Vetted local trade partners handle the work that needs their ticket, and licensed NB electricians handle every circuit &mdash; the battery locker outlet, the EV charger, the LED kit, and any solar tie-in.</p>
+        <p>The split is deliberate. A shed crew that also wires panels is a crew doing work outside its ticket, and an electrician who also frames walls is an electrician doing work outside theirs. Keeping the trades separate keeps the warranties clean and the sign-offs real: the timber is the builder&rsquo;s responsibility, the circuits are the electrician&rsquo;s, and neither one signs for the other&rsquo;s work. When something needs fixing in year three, there is no argument about whose job it was.</p>
+        <p>The electrical work runs on a flat $400-per-hub allowance, priced into the build rather than billed by the hour. That covers the standard hub scope: the exterior GFCI receptacle for the battery wing, the bay EV charger circuit, the LED and USB kit, and the sign-off on the installation. A King of Scenic View solar build carries a two-circuit allowance where the solar and the cart charging run as separate circuits. The point of a flat allowance is that the number is known before the build starts &mdash; no hourly meter running while the electrician works, and no surprise on the final invoice.</p>
+        <div class="article-more" hidden>
+          <p>Sequencing matters as much as pricing. The electrical rough-in happens while the wings are still open, before the lockers are closed up and the linings go in. The electrician signs off before handover, not after &mdash; the build is not complete until the circuits are tested and the sign-off sheet is in the file. That order is what keeps a charger circuit from becoming a retrofit, with wires run on the surface of a finished wall because nobody planned the route.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Scope</th><th>Who does it</th><th>Allowance</th></tr></thead>
+              <tbody>
+                <tr><td>Timber, steel roof, lockers, doors</td><td>PLaCED shop crew</td><td>In build price</td></tr>
+                <tr><td>GFCI, charger circuit, LED/USB kit</td><td>Licensed NB electrician</td><td>$400/hub</td></tr>
+                <tr><td>King solar: two-circuit setup</td><td>Licensed NB electrician</td><td>$800 two-circuit allowance</td></tr>
+                <tr><td>Sign-off before handover</td><td>Licensed NB electrician</td><td>Included</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 class="h3">What the coordination covers</h3>
+          <ul>
+            <li>One build file: timber spec, electrical scope, and sign-off sheet together.</li>
+            <li>Flat $400/hub allowance &mdash; known before the build, not metered after it.</li>
+            <li>Rough-in before close-up, sign-off before handover. No retrofits through finished walls.</li>
+            <li>Any hub with a battery outlet, EV charger, LED kit, or solar tie-in gets a licensed electrician. No exceptions.</li>
+          </ul>
+          <p>Good coordination is invisible when it works: the doors close, the lights come on, the charger charges, and nobody had to come back. That is the standard the $400 allowance buys.</p>
+        </div>
+        <button type="button" class="btn article-toggle" data-target="post-05" aria-expanded="false">Read the full guide</button>
+      </article>
+
+      <!-- POST 06 -->
+      <article class="guide-article" id="post-06" data-category="camp-hub">
+        <p class="kicker">Guide 06 &middot; 18&times;10 Camp Hub &amp; Solar</p>
+        <h2 class="h2">Opposite-Wing Ventilation Safety: Rising Hydrogen (H&#8322;) vs. Heavy Fuel Vapors &amp; Exterior 120V GFCI Placement</h2>
+        <p><span class="pill">18&times;10 Camp Hub &amp; Solar</span> <span class="mono reading-time" data-reading-for="post-06"></span></p>
+        <figure>
+          <img src="assets/img/full-station-winter-cutaway.webp" alt="Winter cutaway of the Full Station showing the battery wing on the left and the gas locker on the right" loading="lazy">
+          <figcaption>Cutaway view: battery left, gas right, and the whole gravel bay between them.</figcaption>
+        </figure>
+        <p class="lead">A camp hub stores two things that must never meet: charging batteries and liquid fuel. Batteries give off hydrogen while they charge. Fuel gives off vapors that are heavier than air. The two gases behave in opposite ways, so the building treats them in opposite ways &mdash; and puts them on opposite ends of the frame.</p>
+        <p>Hydrogen is lighter than air. It rises. The battery locker therefore vents high: an R-12 rigid-foam insulated cold box on the left wing, with a high-wall passive louver that lets rising hydrogen out at the top. The box holds the battery above freezing through the winter while the vent keeps the gas from collecting under the roof. Fuel vapor is the mirror image. Gasoline and two-stroke vapors are heavier than air, so they settle low. The fuel locker on the right wing therefore vents low: a bottom intake louver four inches above the floor, and a 3-inch straight-through roof vent stack with a rain cap that carries the vapor up and out.</p>
+        <p>Separation is the second layer. The battery wing and the fuel wing sit on opposite ends of the 18-foot frame, with the whole 10-foot gravel bay between them. A gas that leaks on one side has to cross an open, ventilated bay to reach the other &mdash; and the bay is open air, not a sealed room, so nothing accumulates there. The workbench zone sits in the right wing with the fuel locker, but the locker itself is a sealed compartment inside that wing, with its own vent stack and its own padlock.</p>
+        <div class="article-more" hidden>
+          <p>The third layer is the electrical rule, and it is absolute: the gas locker contains strictly zero electrical wiring, switches, lights, or receptacles. No outlet, no light, no charger inside that compartment &mdash; a mechanical padlock only. The battery side follows a matching discipline. The dedicated 120V GFCI receptacle mounts outside the sealed battery box, on the dry storage wall of the left wing. Only the low-voltage charger lead passes through a sealed grommet into the vented enclosure, and the placement is signed off by a licensed NB electrician. No mains voltage sits inside a hydrogen-vented compartment, ever.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th></th><th>Left wing &mdash; battery</th><th>Right wing &mdash; fuel</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Gas</strong></td><td>Hydrogen (H&#8322;) &mdash; rises</td><td>Fuel vapor &mdash; settles low</td></tr>
+                <tr><td><strong>Vent</strong></td><td>High-wall passive louver</td><td>Bottom intake louver + 3" roof stack</td></tr>
+                <tr><td><strong>Insulation</strong></td><td>R-12 rigid foam cold box</td><td>Uninsulated sealed compartment</td></tr>
+                <tr><td><strong>Electrical</strong></td><td>120V GFCI outside the box, low-voltage lead in</td><td>Strictly zero electrical inside</td></tr>
+                <tr><td><strong>Access</strong></td><td>Weatherstripped access door</td><td>Padlock hasp + hazard decal</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 class="h3">The safety checklist at handover</h3>
+          <ul>
+            <li>Battery left, gas right &mdash; confirm the wings are not mirrored.</li>
+            <li>High vent clear on the battery box; low louver and roof stack clear on the gas locker.</li>
+            <li>GFCI mounted outside the sealed battery box, not inside it.</li>
+            <li>No wiring, light, or outlet inside the gas compartment. Padlock only.</li>
+            <li>Electrician sign-off sheet in the build file before handover.</li>
+          </ul>
+          <p>Ventilation safety is not a feature to upsell. It is the reason the wings are where they are, and the reason the whole station is 18 feet wide instead of 14. The layout is the safety system.</p>
+        </div>
+        <button type="button" class="btn article-toggle" data-target="post-06" aria-expanded="false">Read the full guide</button>
+      </article>
+
+      <!-- POST 07 -->
+      <article class="guide-article" id="post-07" data-category="camp-hub">
+        <p class="kicker">Guide 07 &middot; 18&times;10 Camp Hub &amp; Solar</p>
+        <h2 class="h2">7&times;7 Commercial Steel Roll-Up Doors vs. Wooden Swing Doors in February Frost Heave</h2>
+        <p><span class="pill">18&times;10 Camp Hub &amp; Solar</span> <span class="mono reading-time" data-reading-for="post-07"></span></p>
+        <figure>
+          <img src="assets/img/camp-hub-single-rollup.png" alt="PLaCED camp hub with a single black steel roll-up door on the cart bay" loading="lazy">
+          <figcaption>Single 7&times;7 steel roll-up on the flagship: it rides its tracks, whatever the ground does.</figcaption>
+        </figure>
+        <p class="lead">February is when a cart shelter proves itself or fails. The ground freezes, swells, and lifts &mdash; frost heave moves the earth under the building by inches &mdash; and the door is the part that has to keep working through it. Wooden swing doors do not. Steel roll-ups do, and the reason is geometry, not marketing.</p>
+        <p>A wooden swing door hangs on hinges and swings out over the ground. When frost heave lifts the pad or the threshold by even an inch, the door drags, binds, and eventually will not open at all &mdash; or will not close, which is worse in a building that stores fuel and batteries. The owner&rsquo;s options are to shovel, to plane the door, or to wait for spring. None of those are a door working. The problem gets worse every winter as the door absorbs moisture, swells, and warps on top of the heave.</p>
+        <p>A commercial steel roll-up door rides in vertical tracks and rolls up into a drum canister overhead. It does not swing over the ground, so heaved ground cannot block it. The flexible bottom gasket seals over uneven gravel, taking up the couple of inches of heave without a gap the wind can find. The 7&times;7 opening sits inside a 9'-1" clear post width, so there is room on both sides of the door for the tracks and the canister. An electric opener with a visor remote is a $600 add-on for the owners who want to open the bay without getting out of the cart.</p>
+        <div class="article-more" hidden>
+          <p>The roll-up is also the winter close-up. The Full Station ladder is built around it: open bay at the bottom, heavy canvas curtains next, fitted wood panels after that, and the single steel roll-up as the flagship. The dual roll-up rung adds a second 7&times;7 door on the back wall for true drive-through &mdash; in one side, out the other, without ever reversing a cart. Canvas never binds on heave, panels are solid and come off in May, and steel locks and lets the owner walk away for the winter.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th></th><th>7&times;7 steel roll-up</th><th>Wooden swing doors</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Frost heave</strong></td><td>Rides tracks, seals over heave</td><td>Drags, binds, jams shut</td></tr>
+                <tr><td><strong>Opening</strong></td><td>7'-0" wide &times; 7'-0" high</td><td>Double doors, same opening, more hardware</td></tr>
+                <tr><td><strong>Winter</strong></td><td>Locks, seals, forget it till May</td><td>Swells, warps, needs planing</td></tr>
+                <tr><td><strong>Drive-through</strong></td><td>Dual roll-ups, front and back</td><td>Not practical &mdash; two sets of swing doors</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 class="h3">Choosing your close-up</h3>
+          <ul>
+            <li><strong>Open bay:</strong> no closure, lowest cost, for carts that come home for winter.</li>
+            <li><strong>Canvas curtains:</strong> heavy marine canvas with straps, never binds on heave.</li>
+            <li><strong>Fitted wood panels:</strong> solid slip-in panels with latches, off in May.</li>
+            <li><strong>Steel roll-up:</strong> the flagship. Locks, seals, and opens with a remote.</li>
+          </ul>
+          <p>A door is not a detail. In a Fundy February it is the difference between a building that works and a building that waits for spring.</p>
+        </div>
+        <button type="button" class="btn article-toggle" data-target="post-07" aria-expanded="false">Read the full guide</button>
+      </article>
+
+      <!-- POST 08 -->
+      <article class="guide-article" id="post-08" data-category="camp-hub">
+        <p class="kicker">Guide 08 &middot; 18&times;10 Camp Hub &amp; Solar</p>
+        <h2 class="h2">Off-Grid 400W Roof Solar &amp; Self-Heating 100Ah LiFePO4 Batteries for Seasonal Camps</h2>
+        <p><span class="pill">18&times;10 Camp Hub &amp; Solar</span> <span class="mono reading-time" data-reading-for="post-08"></span></p>
+        <figure>
+          <img src="assets/img/handbook-dusk-solar.webp" alt="PLaCED camp hub at dusk with solar panels on the roof and lights on inside" loading="lazy">
+          <figcaption>Dusk at the hub: roof solar, battery bank inside, and no trench back to the clubhouse.</figcaption>
+        </figure>
+        <p class="lead">A seasonal campground lot rarely has a power pedestal where the cart shelter sits &mdash; and trenching one in means digging through a park&rsquo;s lawns, water lines, and somebody else&rsquo;s lot. Roof solar solves the problem by putting the power where the building already is: 400 watts of monocrystalline panels on the front slope, feeding a battery bank in the left wing, running the lights, the trickle charger, and the door opener with no trench and no park hydro fees.</p>
+        <p>The battery is the part that makes the system work in New Brunswick. A 100Ah self-heating LiFePO4 bank holds the charge through the season and, crucially, keeps accepting a charge in the cold. Standard lithium batteries refuse to charge below freezing, which is exactly when a seasonal camp needs the tender running. The self-heating bank warms itself before it charges, so the winter trickle charge keeps working in January instead of shutting down in November. The panels feed it through an MPPT charge controller, and a 2000W inverter turns the stored power into the 120V the lights and charger need.</p>
+        <p>The King of Scenic View bundle puts the whole system together: 400W roof solar, the 100Ah self-heating LiFePO4 bank, the 2000W inverter, a remote roll-up opener, a 48V cart charger circuit, a security pack, and a NOCO winter tender &mdash; $9,999 cash, saving $993 against the Pro Wired bundle plus the add-ons. For carts that run long days and charge hard, an 800W solar boost array is a $3,400 add-on that doubles the roof harvest. Every solar and electrical tie-in is signed off by a licensed NB electrician, and the panels are rack-mounted on the front slope of the steel roof, where the sun hits and the snow slides off.</p>
+        <div class="article-more" hidden>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Solar tier</th><th>What it runs</th><th>Cash add-on</th></tr></thead>
+              <tbody>
+                <tr><td><strong>400W + 100Ah LiFePO4</strong></td><td>LEDs, trickle charge, door opener</td><td>$2,400</td></tr>
+                <tr><td><strong>800W boost + 200Ah</strong></td><td>Everything above, plus heavy 48V cart charging</td><td>$3,400</td></tr>
+                <tr><td><strong>King bundle (all-in)</strong></td><td>Solar + opener + 48V charger + security + tender</td><td>$9,999 turnkey</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 class="h3">What off-grid does and does not mean</h3>
+          <ul>
+            <li><strong>It does mean:</strong> lights, trickle charging, and the door opener run from day one, with no trench and no park hydro bill.</li>
+            <li><strong>It does not mean:</strong> unlimited power. The bank is sized for the hub&rsquo;s loads &mdash; lights, tender, opener &mdash; not for heating the building.</li>
+            <li><strong>Winter care:</strong> the self-heating bank handles the cold, but keep the panels clear of snow after a storm so the harvest keeps coming.</li>
+            <li><strong>Safety:</strong> solar tie-ins and charger circuits are electrician work, signed off before handover.</li>
+          </ul>
+          <p>Off-grid is not a compromise for a camp hub. It is the point: the building makes its own power, where it stands, and the park never has to dig a trench for it.</p>
+        </div>
+        <button type="button" class="btn article-toggle" data-target="post-08" aria-expanded="false">Read the full guide</button>
+      </article>
+
+      <!-- POST 09 -->
+      <article class="guide-article" id="post-09" data-category="pricing">
+        <p class="kicker">Guide 09 &middot; Pricing &amp; Park ROI</p>
+        <h2 class="h2">How the 30% Pre-Tax Material Deposit &amp; Milestone Billing Protects Your Build Price</h2>
+        <p><span class="pill">Pricing &amp; Park ROI</span> <span class="mono reading-time" data-reading-for="post-09"></span></p>
+        <figure>
+          <img src="assets/img/camp-hub-wood-finish.webp" alt="Finished timber work inside a PLaCED camp hub wing with workbench and shelving" loading="lazy">
+          <figcaption>Finished wing: the deposit bought the materials before the first cut was made.</figcaption>
+        </figure>
+        <p class="lead">Lumber prices move. A quote written in January can be wrong by March, and a builder who absorbs that movement either cuts corners or comes back asking for more. The 30% pre-tax material deposit exists to stop both things from happening: it locks the materials, the price, and the build week at the moment the order is placed.</p>
+        <p>The deposit is 30% of the pre-tax cash price, calculated with simple rounding &mdash; a $5,299 flagship takes a $1,590 deposit, a $4,499 open canopy takes $1,350, and the $9,999 King of Scenic View takes $3,000. The deposit goes straight into materials at local lumber rates, ordered before the shop starts cutting. By the time the panels are on the jigs, the wood is already bought, already paid for, and already in the shop. A price rise after that point is the supplier&rsquo;s problem, not the customer&rsquo;s.</p>
+        <p>The balance plus 15% NB HST is due on completion, when the building is standing, the doors work, the circuits are signed off, and the keys change hands. The HST is itemized separately on the quote sheet, so the cash price, the tax, and the deposit are three numbers that can each be checked &mdash; not one number that hides the other two. All major payment methods are accepted for the deposit and the balance: credit, debit, Interac e-transfer, and cash.</p>
+        <div class="article-more" hidden>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Build</th><th>Cash price</th><th>30% deposit</th><th>Total with 15% HST</th></tr></thead>
+              <tbody>
+                <tr><td>Rung 1 &mdash; Open Canopy</td><td>$4,499</td><td>$1,350</td><td>$5,173.85</td></tr>
+                <tr><td>Rung 4 &mdash; Steel Roll-Up (Flagship)</td><td>$5,299</td><td>$1,590</td><td>$6,093.85</td></tr>
+                <tr><td>Bundle 1 &mdash; Pro Wired</td><td>$6,899</td><td>$2,070</td><td>$7,933.85</td></tr>
+                <tr><td>Bundle 2 &mdash; King of Scenic View</td><td>$9,999</td><td>$3,000</td><td>$11,498.85</td></tr>
+                <tr><td>8&times;10 Utility / Baby Barn</td><td>$3,999</td><td>$1,200</td><td>$4,598.85</td></tr>
+                <tr><td>12&times;20 Lofted Barn</td><td>$9,499</td><td>$2,850</td><td>$10,923.85</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 class="h3">What the deposit protects</h3>
+          <ul>
+            <li><strong>Materials:</strong> ordered at order-time prices, before the shop cuts.</li>
+            <li><strong>Price:</strong> the quoted cash price holds through the build, whatever lumber does.</li>
+            <li><strong>Build week:</strong> the deposit reserves a slot in the winter shop schedule and the spring delivery run.</li>
+            <li><strong>Clarity:</strong> cash price, HST, and deposit itemized separately on the quote sheet.</li>
+          </ul>
+          <p>Group orders work the same way: each neighbour&rsquo;s deposit locks their own materials and their own build week, and the $250 batch saving applies to each neighbour&rsquo;s cash price before the 30% is calculated. And if the build week moves for weather or park access, the deposit stays attached to the order: the materials are already bought, so the price does not move with the calendar.</p>
+          <p>A deposit is not a fee for the privilege of waiting. It is the money that buys the building&rsquo;s materials, and the reason the price on the quote is the price on the invoice.</p>
+        </div>
+        <button type="button" class="btn article-toggle" data-target="post-09" aria-expanded="false">Read the full guide</button>
+      </article>
+
+      <!-- POST 10 -->
+      <article class="guide-article" id="post-10" data-category="pricing">
+        <p class="kicker">Guide 10 &middot; Pricing &amp; Park ROI</p>
+        <h2 class="h2">Campground Group Batching: How 3 to 5 Neighbors Save $250 Each on a Single Drop Week</h2>
+        <p><span class="pill">Pricing &amp; Park ROI</span> <span class="mono reading-time" data-reading-for="post-10"></span></p>
+        <figure>
+          <img src="assets/img/camp-hub-summer-open.webp" alt="PLaCED camp hub open for summer with the cart bay doors open and a golf cart inside" loading="lazy">
+          <figcaption>Summer, open bay: three neighbours, one delivery run, $250 off each.</figcaption>
+        </figure>
+        <p class="lead">One delivery run costs nearly the same whether the flatbed carries one hub or three. The truck, the driver, the two-person install crew, and the day on the road are fixed costs &mdash; so when three to five neighbours in the same park order together for a single drop week, the saving goes back to the neighbours: $250 off per unit.</p>
+        <p>The arithmetic is straightforward. A flagship Full Station at $5,299 cash drops to $5,049 in a batch. Three flagships in one run save $750 across the group; five save $1,250. The discount is per unit, not per order, so every neighbour in the batch gets the same $250 &mdash; there is no first-one-wins or biggest-order-wins. The batch needs three units minimum and five maximum on one coordinated drop week, in one park.</p>
+        <p>Batching works because the shop builds the same way it always does: panelized, on jigs, over the winter, with the materials for the whole batch ordered together at one set of lumber prices. The only thing that changes is the delivery &mdash; one truck, one crew, one day, several lots in a row. The park likes it because the disruption is one week instead of five separate install days spread across the season, and the neighbours like it because the saving is real money, not a coupon.</p>
+        <div class="article-more" hidden>
+          <h3 class="h3">How to put a batch together</h3>
+          <ul>
+            <li><strong>Find three:</strong> three to five neighbours in the same park, each wanting a hub. One trusted seasonal usually carries the list.</li>
+            <li><strong>Pick a drop week:</strong> one coordinated week before the season opens, so every unit is in place for the first long weekend.</li>
+            <li><strong>Lock with deposits:</strong> each neighbour&rsquo;s 30% pre-tax deposit locks their materials, their price, and their slot in the batch.</li>
+            <li><strong>One delivery day:</strong> the truck and crew work lot to lot. Each install is a one-day panelized assembly.</li>
+            <li><strong>$250 off per unit:</strong> applied to each neighbour&rsquo;s cash price, itemized on each quote sheet.</li>
+          </ul>
+          <p>The batch is also how a park gets its first row. Three hubs in a row by the bar or the fairway is the display the contest is built on &mdash; and the neighbours who batched together are the ones with the finished setups to photograph. The saving gets them in the door. The row does the advertising.</p>
+        </div>
+        <button type="button" class="btn article-toggle" data-target="post-10" aria-expanded="false">Read the full guide</button>
+      </article>
+
+      <!-- POST 11 -->
+      <article class="guide-article" id="post-11" data-category="pricing">
+        <p class="kicker">Guide 11 &middot; Pricing &amp; Park ROI</p>
+        <h2 class="h2">Campground Owner Playbook: Split-Zone 4-Bay Rental Rows (36.2 to 42.9-Month Gross Payback)</h2>
+        <p><span class="pill">Pricing &amp; Park ROI</span> <span class="mono reading-time" data-reading-for="post-11"></span></p>
+        <figure>
+          <img src="assets/img/camp-hub-dual-rollup.png" alt="PLaCED camp hub with dual steel roll-up doors front and back for true drive-through access" loading="lazy">
+          <figcaption>Dual roll-ups, front and back: the drive-through configuration that rents by the bay and by the locker.</figcaption>
+        </figure>
+        <p class="lead">A campground owner does not buy a cart shelter. The owner buys a rent roll. The question is how the building earns: by the bay, by the locker, or by both at once. The split-zone row earns by both, and the payback numbers show why that matters.</p>
+        <p>Start with the simple rows. A 32&times;10 four-bay open row costs $9,699 to build and rents at $65 a month per bay &mdash; $260 a month across four bays, $3,120 a year. Gross payback lands at 37.3 months, with a five-year net of +$5,901 on a 60.8% return. Enclose the row with roll-up doors and the numbers sharpen: $12,299 to build, $85 a month per bay, $340 a month across the row, 36.2-month payback, +$8,101 over five years at 65.9%. The enclosed row costs more and pays back faster, because a closed bay rents for more than an open one.</p>
+        <p>The split-zone row is the third option, and it is the one that changes the model. Four Pro Wired Full Stations, batched at $26,596 after the $250-per-unit group discount, rent in three zones each: the center bay at $85 a month and each side locker at $35 a month, for $155 a month per station and $620 a month across the four. Gross payback is 42.9 months with a five-year net of +$10,604 at 39.9% &mdash; a longer payback than the simple rows, but the largest five-year net of the three, because the lockers earn rent the open rows never see.</p>
+        <div class="article-more" hidden>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>4-stall configuration</th><th>Park CapEx</th><th>Monthly gross</th><th>Payback</th><th>5-yr net (ROI)</th></tr></thead>
+              <tbody>
+                <tr><td>32&times;10 4-Bay Open Row</td><td>$9,699</td><td>$260/mo</td><td>37.3 mos</td><td>+$5,901 (60.8%)</td></tr>
+                <tr><td>32&times;10 4-Bay Enclosed Roll-Up Row</td><td>$12,299</td><td>$340/mo</td><td>36.2 mos</td><td>+$8,101 (65.9%)</td></tr>
+                <tr><td>4&times; Pro Wired &mdash; Split-Zone</td><td>$26,596</td><td>$620/mo</td><td>42.9 mos</td><td>+$10,604 (39.9%)</td></tr>
+                <tr><td>4&times; Pro Wired &mdash; Single-Tenant Trap</td><td>$26,596</td><td>$340/mo</td><td>78.2 mos</td><td>-$6,196 (-23.3%)</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>The last row is the warning. Rent the same four Pro Wired stations to a single tenant per station at $85 a month and the payback stretches to 78.2 months &mdash; six and a half years &mdash; with a five-year net of negative $6,196. The building is identical. The only difference is the lease structure: one rent per station instead of three. An owner who leases by the station instead of by the zone leaves the locker rent on the table and doubles the payback for it.</p>
+          <h3 class="h3">The owner&rsquo;s checklist</h3>
+          <ul>
+            <li>Price the bay and the lockers separately &mdash; the lockers are the margin.</li>
+            <li>Enclosed bays rent higher than open bays and pay back faster despite the higher build cost.</li>
+            <li>Batch the row: the $250-per-unit group discount applies to park orders too.</li>
+            <li>Confirm the park&rsquo;s rules on size, placement, and color before ordering the row.</li>
+            <li>Run the payback on gross rent, and keep maintenance and vacancy as separate lines &mdash; not buried in the rent.</li>
+          </ul>
+          <p>These are gross payback figures: capital cost divided by monthly gross rent, and five-year gross rent minus capital cost. They do not include maintenance, vacancy, or financing. Run your park&rsquo;s own numbers on top of them before committing &mdash; but run them on the split-zone structure, not the single-tenant one.</p>
+        </div>
+        <button type="button" class="btn article-toggle" data-target="post-11" aria-expanded="false">Read the full guide</button>
+      </article>
+
+      <!-- POST 12 -->
+      <article class="guide-article" id="post-12" data-category="camp-hub">
+        <p class="kicker">Guide 12 &middot; 18&times;10 Camp Hub &amp; Solar</p>
+        <h2 class="h2">1-Day Panelized Assembly: Zero Heavy Boom-Truck Damage to Lawns &amp; Park Water Lines</h2>
+        <p><span class="pill">18&times;10 Camp Hub &amp; Solar</span> <span class="mono reading-time" data-reading-for="post-12"></span></p>
+        <figure>
+          <img src="assets/img/camp-hub-framing-posts.webp" alt="Framing posts with cedar Y-braces during panelized assembly of a PLaCED camp hub" loading="lazy">
+          <figcaption>Panelized framing: posts, braces, and jigged panels, ready for a one-day install.</figcaption>
+        </figure>
+        <p class="lead">The fastest way to ruin a campground lot is to bring the wrong truck onto it. A boom truck or a crane crosses a lawn once and the ruts last the season; a trencher cuts a water line and the park spends the weekend fixing it. The Full Station is built so neither machine ever shows up: panelized in the shop over the winter, delivered on a flatbed, and assembled on the lot in a single day by two carpenters.</p>
+        <p>Panelized means the building arrives as finished pieces, not as a pile of lumber. Posts are notched in the shop. Rafters are jigged so every one matches. Wings arrive as panels with their siding, floors, and shelving already fitted. The crew&rsquo;s job on the lot is assembly, not carpentry &mdash; set the posts on the helical augers, raise the panels, set the roof sheets, hang the roll-up, and fit the lockers. Five to six field hours, start to finish, and the station is wiped down and handed over the same day.</p>
+        <p>The groundwork is just as light. Four 30-inch helical earth augers screw into the ground and hold the frame down &mdash; no concrete footings, no excavation, no frost wall, and nothing dug deep enough to find a water line. The cart bay needs no foundation at all: compacted crushed stone, graded and settled, is the floor. The whole install touches the lot with a flatbed&rsquo;s tires and two pairs of boots, and when the crew leaves, the only evidence is the building itself.</p>
+        <div class="article-more" hidden>
+          <h3 class="h3">The install day, hour by hour</h3>
+          <ul>
+            <li><strong>Arrival:</strong> flatbed delivery, panels offloaded by hand. No boom truck, no crane.</li>
+            <li><strong>Anchors:</strong> four helical augers set, posts raised with 45&deg; cedar Y-braces.</li>
+            <li><strong>Wings:</strong> panelized wing walls set on 4&times;4 pressure-treated skids, floors fitted.</li>
+            <li><strong>Roof:</strong> continuous 29-gauge 3-rib steel sheets on, ridge capped.</li>
+            <li><strong>Doors &amp; lockers:</strong> roll-up hung and tested, battery and gas lockers fitted and vented.</li>
+            <li><strong>Handover:</strong> magnet sweep of the turf so no fastener is left behind, keys handed over, build file signed.</li>
+          </ul>
+          <p>Winter is when the shop work happens: the panels are cut, the posts are notched, and the wings are fitted while the park is closed and the ground is frozen. Spring is when the buildings arrive &mdash; one flatbed, one crew, one day per lot, and the park opens with the row already standing. That sequence is the whole point of panelized building: the slow work happens in the shop, and the lot only ever sees the fast day.</p>
+        </div>
+        <button type="button" class="btn article-toggle" data-target="post-12" aria-expanded="false">Read the full guide</button>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- SHOP DESK CTA -->
+  <section class="section">
+    <div class="wrap">
+      <div class="card card-highlight">
+        <p class="kicker">Ready when you are</p>
+        <h2 class="h2">Make this place your home.</h2>
+        <p class="lead">Lock a build slot with a 30% pre-tax material deposit. All major payment methods are accepted: credit, debit, Interac e-transfer, and cash. Balance plus 15% NB HST is due on completion.</p>
+        <div class="btn-row">
+          <a href="tel:+15066502122" class="btn btn-primary">Call Shop Desk</a>
+          <a href="mailto:placed.sj@gmail.com" class="btn">Email Shop Desk</a>
+          <a href="contact.html" class="btn">Lock Build Slot</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="grid-3">
+      <div>
+        <p><strong>PLaCED Outdoor Sheds</strong></p>
+        <p>Quispamsis &middot; Kennebecasis Valley &middot; Saint John &middot; Southern New Brunswick</p>
+        <p>Make this place your home.</p>
+      </div>
+      <div>
+        <p class="kicker">Explore</p>
+        <p><a href="sheds.html">Models &amp; Pricing</a><br>
+        <a href="full-station.html">Full Station</a><br>
+        <a href="estimator.html">Build Estimator</a><br>
+        <a href="handbook.html">Venture Handbook</a><br>
+        <a href="faq.html">FAQ</a></p>
+      </div>
+      <div>
+        <p class="kicker">Shop Desk</p>
+        <div class="btn-row">
+          <a href="tel:+15066502122" class="btn btn-primary">Call Shop Desk</a>
+          <a href="mailto:placed.sj@gmail.com" class="btn">Email Shop Desk</a>
+        </div>
+        <p>All major payment methods accepted. 30% pre-tax material deposit locks materials and build week.</p>
+      </div>
+    </div>
+    <p class="mono">&copy; PLaCED Outdoor Sheds &mdash; The Venture Handbook. Built for Southern New Brunswick winters.</p>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+<script>
+(function () {
+  var articles = Array.prototype.slice.call(document.querySelectorAll('.guide-article'));
+  var tocCards = Array.prototype.slice.call(document.querySelectorAll('.toc-card'));
+  var countEl = document.getElementById('guide-count');
+
+  // Reading-time badges: ~200 words per minute, minimum 2 minutes.
+  function wordCount(el) {
+    var text = el.innerText || el.textContent || '';
+    var words = text.trim().split(/\s+/).filter(Boolean);
+    return words.length;
+  }
+  articles.forEach(function (article) {
+    var mins = Math.max(2, Math.ceil(wordCount(article) / 200));
+    var label = mins + ' min read';
+    article.querySelectorAll('.reading-time').forEach(function (badge) {
+      badge.textContent = label;
+    });
+    var tocBadge = document.querySelector('.reading-time[data-reading-for="' + article.id + '"]');
+    if (tocBadge) tocBadge.textContent = label;
+  });
+
+  // Expand / collapse a single article.
+  function setExpanded(article, expanded) {
+    var more = article.querySelector('.article-more');
+    var btn = article.querySelector('.article-toggle');
+    if (more) more.hidden = !expanded;
+    if (btn) {
+      btn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+      btn.textContent = expanded ? 'Show less' : 'Read the full guide';
+    }
+  }
+  articles.forEach(function (article) {
+    var btn = article.querySelector('.article-toggle');
+    if (btn) btn.addEventListener('click', function () {
+      var more = article.querySelector('.article-more');
+      setExpanded(article, !!(more && more.hidden));
+    });
+  });
+  document.getElementById('expand-all').addEventListener('click', function () {
+    articles.forEach(function (a) { if (a.style.display !== 'none') setExpanded(a, true); });
+  });
+  document.getElementById('collapse-all').addEventListener('click', function () {
+    articles.forEach(function (a) { setExpanded(a, false); });
+  });
+
+  // TOC click: show and expand the target guide.
+  tocCards.forEach(function (card) {
+    card.addEventListener('click', function () {
+      var id = card.getAttribute('href').slice(1);
+      var article = document.getElementById(id);
+      if (article) {
+        article.style.display = '';
+        setExpanded(article, true);
+        updateCount();
+      }
+    });
+  });
+
+  // Filter buttons.
+  function updateCount() {
+    var visible = articles.filter(function (a) { return a.style.display !== 'none'; }).length;
+    if (countEl) countEl.textContent = 'Showing ' + visible + ' of 12 guides';
+  }
+  document.querySelectorAll('.filter-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      document.querySelectorAll('.filter-btn').forEach(function (b) {
+        b.classList.remove('is-active', 'pill-cedar');
+      });
+      btn.classList.add('is-active', 'pill-cedar');
+      var filter = btn.getAttribute('data-filter');
+      articles.forEach(function (article) {
+        var show = filter === 'all' || article.getAttribute('data-category') === filter;
+        article.style.display = show ? '' : 'none';
+      });
+      tocCards.forEach(function (card) {
+        var show = filter === 'all' || card.getAttribute('data-category') === filter;
+        card.style.display = show ? '' : 'none';
+      });
+      updateCount();
+    });
+  });
+  updateCount();
+})();
+</script>
 </body>
 </html>
